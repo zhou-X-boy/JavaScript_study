@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			//window.close();
+			//window.open('http://www.baidu.com','self',"widyh=300px,heigth=300px,top=0,left=0");
+		    var time01=setTimeout(function(){close();},5000);//一次性定时器，5秒钟后关闭窗口
+		    var time02=setInterval(function(){alert("A");},3000);//周期性定时器，每隔三秒弹出一个弹窗
+		    //clearTimeout(time01);//清楚一次性定时器
+			//clearInterval(time02);//清楚周期性定时器
+		</script>
+		<button onclick="clearTimeout(time01)">点我</button>
+		<button onclick="clearInterval(time02)">点我</button>
+	</head>
+	<body>
+		
+		<a href="http://www.baidu.com" target="_self">跳转链接</a><br />
+	    <a href="javascript:window.open('http://www.baidu.com','self','toolbar=no,widyh=300px,heigth=300px,top=0,left=0')">window.open在新窗口打开网页</a><br />
+		<a href="javascript:window.close();">关闭窗口</a><br />
+	    <a href="javascript:"></a>
+		<a href="javascript:"></a>
+		<a href="javascript:open('http://www.baidu.com','_blank','toolbar=no,menubar=no,top=40px,left=40px,width=300px,height=200px');">js:在新窗口打开网页，并设置窗口大小</a>
+	</body>
+</html>

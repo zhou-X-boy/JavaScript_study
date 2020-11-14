@@ -1,0 +1,100 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>HTML DOM</title>
+<style>
+#list {padding:0;list-style-type:none; width:1200px; margin:0 auto;}
+#list:after{
+	display:table;
+	content:'';
+	clear:both;}
+#list li{ width:180px; padding:0 5px; float:left; }
+ #list li a{ display:block; text-align:center; font-size:24px;background:#FCF; }
+  #list li  img{ width:200%; opacity:0; transition:all ease-in-out 200ms;}
+#list li:hover img,
+#list li a:hover img{
+	opacity:1;}
+</style>
+</head>
+<body>
+<h2>元素节点的遍历查找</h2>
+
+<p id="box">想知道列表里的所有子节点？？</p>
+<p onClick="fun()" style="color:blue">点我就知道</p>
+
+<ul id="list">
+	<li id="item01">
+    	<a href="#">水果</a> 
+    </li>
+    <li id="item02">
+    	<a href="#">菠萝</a> 
+    </li>
+    <li id="item03">
+    	<a href="#">樱桃</a> 
+    </li>
+    <li id="item04">
+    	<a href="#">橙子</a> 
+    </li>
+    <li id="item05">
+    	<a href="#">草莓</a> 
+    </li>
+    <li id="item06">
+    	<a href="#">西红柿</a> 
+    </li>
+</ul>
+
+
+<script>  
+//DOM元素遍历
+  
+//1 查找父元素节点
+//parentNode 属性以 Node 对象的形式返回指定节点的父节点。
+var list=document.getElementById("list"); 
+var item01= document.getElementById("item01");  
+console.log('item01的父级节点是：' + item01.parentNode);
+
+
+
+
+//2 查找所有的子元素节点
+//childNodes 属性返回节点的子节点集合，以 NodeList 对象。
+var list=document.getElementById("list");
+var all=list.childNodes; 
+console.log('list的所有子级节点是：' + all.length);
+//为什么会是十三个
+
+
+
+function fun(){
+	var txt=''; 
+	for(var i=0; i<all.length; i++){
+		txt+=all[i].nodeName + "&nbsp;&nbsp;&nbsp;";
+		 
+	}
+	box.innerHTML=txt;
+}  
+
+
+//3 第一个子节点
+console.log('list的第一个子节点：' + list.firstChild.innerHTML);
+console.log('list的第二个子节点：' + list.childNodes[1].innerHTML);
+
+//4 是否有子节点
+console.log('item01是否有子节点：' + item01.hasChildNodes());
+
+
+
+//5 前一个同胞节点，返回节点对象
+var item05=document.getElementById("item05");
+
+console.log('item05前一个同胞节点是：' + item05.previousSibling);
+
+
+//6 后一个同胞节点，返回节点对象
+console.log('item05前一个同胞节点是：' + item05.nextSibling);
+</script>
+
+
+</body>
+</html>

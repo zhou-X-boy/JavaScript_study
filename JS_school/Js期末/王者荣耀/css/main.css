@@ -1,0 +1,252 @@
+.main{
+	width: 1499px;
+	height: 427px;
+	/* border: 1px solid red; */
+	margin-top: 450px;
+	
+}
+/* main背景图 */
+.bj-img{
+	width: 1080px;
+	height:400px;
+	/* border: 1px black solid; */
+	background-image: url("../images/rotate_bg.jpg");
+	background-repeat: no-repeat;
+	background-position: 238px -2px;
+}
+
+/* main-left部分 */
+.m0{ 
+	margin: 0 auto;
+}
+.charge-btns {
+	position: relative;
+	width: 600px;
+	padding: 0 5%;
+	/* border: 1px solid red; */
+	top: 4px;
+	left: -2px;
+}
+
+.charge-btns::after {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+.charge-btns button {
+	width: 20%;
+	height: 3em;
+	/* line-height: 3em; */
+	float: left;
+	font-size: 14px;
+	text-align: center;
+	background: none;
+	color: #b8b9c5;
+	/* border: 1px yellow solid; */
+	padding-left: 6px;
+}
+.charge-btns button:hover {
+	color: #e4b653;
+	background-color: #858792;
+	transition: background 1ms ease-in 1ms;
+} 
+.chargeCont {
+	height: 295px;
+	width: 605px; 
+	margin-left: 238px;
+	display: none;
+	/* border: 1px solid blue; */
+	
+}
+.cc01{
+   display: block;
+}
+/* main-right部分 */
+.charge-btns01 {
+	height: 50px;
+	width: 200px;
+	padding: 0 5% ;
+	/* border: 1px solid red; */
+	margin-left: 800px;
+	margin-top: -335px;
+	text-align: center;
+}
+
+.charge-btns01::after {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+.charge-btns01>button {
+	width:20%
+	float: left;
+	font-size: 14px;
+	background: none;
+	/* border: 1px yellow solid; */
+	color: #b8b9c5;
+	margin-top: 8px;
+	padding-left: 4px;
+	padding-bottom: 10px;
+	
+}
+
+.btn_bd {
+	border-bottom: 2px solid  #e4b653;
+}
+
+
+
+.chargeCont-right {
+	position: relative;
+	width: 235px; 
+	height: 284px;
+	display: none;
+	/* border: 1px solid blue; */
+	margin-left: 841px;
+	margin-top: 0px;
+}
+.c01{
+   display: block;
+}
+.top{
+	position: absolute;
+	top: 6px;
+	list-style: none;
+	width: 234px;
+	height: 35px;
+	background-color: #414046;
+	left: 2px;
+}
+.top a{
+	position: absolute;
+	left: 20px;
+	color: #e4b653;
+	font-size: 15px;
+	text-decoration: none;
+	text-align: center;
+	padding-top: 6px;
+}
+.top a:hover{
+	text-decoration: underline;
+	color:  #e4b653;
+}
+
+.main-top-right{
+    width: 238px;
+    height: 340px;
+    float: left;
+/* 	border: 1px solid red;	 */
+    background: url("../images/index.png") no-repeat; 
+	background-position: 0 -218px;
+	left: 240px;
+	top: -336px;
+	position: relative;
+}
+.main-top-right #download_s1{
+	width:232px;
+	height: 118px;
+	list-style:none;
+	/* border: 1px solid blue; */
+}
+#download_s1 a{
+	position: absolute;
+	color: rgb(0,0,0,0.0);
+	text-decoration: none;
+	font-size: 25px;
+	top: 30px;
+	left: 60px;
+}
+.main-top-right #download_s2{
+	width:232px ;
+	height: 104px;
+	/* border: 1px solid red; */
+	margin-top: 2px;
+	list-style:none;
+}
+#download_s2 a{
+	position: absolute;
+	text-decoration: none;
+	font-size: 25px;
+	top: 150px;
+	left: 19px;
+	color: rgb(0,0,0,0.0);
+}
+.main-top-right #download_s3{
+	width: 232px;
+	height: 104px;
+	/* border: 1px solid green; */
+	margin-top: 5px;
+	list-style:none;
+}
+#download_s3 a{
+	position: absolute;
+	text-decoration: none;
+	font-size: 25px;
+	top: 265px;
+	left: 19px;
+	color: rgb(0,0,0,0.0);
+}
+
+.between-img{
+	position: relative;
+	width: 1080px;
+	height: 110px;
+	/* border: 1px solid green; */
+	top: -25px;
+	left: 235px;
+
+}
+#between-imgs1 {
+	position: absolute;
+	width: 291px;
+	height: 134px;
+	
+/* 	border: 1px solid blue; */
+	top: 0px;
+	left: 0px;
+	list-style:none;
+}
+#between-imgs1 {
+	position: absolute;
+	width: 291px;
+	height: 134px;
+	
+/* 	border: 1px solid blue; */
+	top: 0px;
+	left: 0px;
+	list-style:none;
+}
+#between-imgs2 {
+	position: absolute;
+	width: 291px;
+	height: 134px;
+	
+/* 	border: 1px solid blue; */
+	top: 0px;
+	left: 278px;
+	list-style:none;
+}
+#between-imgs3 {
+	position: absolute;
+	width: 291px;
+	height: 134px;
+	
+/* 	border: 1px solid blue; */
+	top: 0px;
+	left: 555px;
+	list-style:none;
+}
+#between-imgs4 {
+	position: absolute;
+	width: 291px;
+	height: 134px;
+/* 	border: 1px solid blue; */
+	top: 0px;
+	left: 830px;
+	list-style:none;
+}
+.between-img li img:hover{
+	transform: scale(1.05);
+}

@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>jQuery插入元素</title>
+	<script src="js/jquery-1.10.2.js"></script>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+		} 
+		.list{ border:1px dashed #666; width: 300px; padding-bottom:20px;margin:0 auto;}
+		.list dt.tou{
+			font-size: 24px;
+			color: #333;
+			font-weight: bold;
+			margin-top: 10px;
+		}
+		.list dd{
+			padding-left:14px;
+			font-size: 18px;
+			line-height: 1.5em;
+			color: darkviolet;
+		}
+	</style>
+
+</head>
+
+<body>
+	<h3 style="text-align:center;padding:30px;">demo0407：纵向下拉菜单</h3>
+	<div class="list">
+		<dt class="tou">2019年度电影榜</dt>
+		<dd>哪吒之魔童降世</dd>
+		<dd>何以为家</dd>
+		<dd>寄生虫</dd>
+		<dd>流浪地球</dd>
+
+		<dt class="tou">2018年度电影榜</dt>
+		<dd>我不是药神</dd>
+		<dd>无名之辈</dd>
+		<dd>头号玩家</dd>
+		<dd>瞒天过海：美人计</dd>
+
+		<dt class="tou">2017年度电影榜</dt>
+		<dd>看不见的客人</dd>
+		<dd>天才少女</dd>
+		<dd>逃出绝命镇</dd>
+		<dd>寻梦环游记</dd>
+	</div>
+	<script> 
+
+		$(document).ready(function () { 
+			$("dd").hide();
+			$("dt.tou").click(function(){
+				$(this).siblings("dd").slideUp();
+				$(this).nextUntil("dt.tou",'dd').slideDown();
+			})
+		}); 
+	</script>
+</body>
+
+</html>

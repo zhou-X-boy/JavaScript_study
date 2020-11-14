@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="js/jquery-1.10.2.js"></script>
+		 <style type="text/css">
+		        ul {
+		            list-style: none
+		        }
+		
+		        * {
+		            margin: 0;
+		            padding: 0;
+		        }
+		
+		        #box {
+		            width: 600px;
+		            height: 250px;
+		            margin: 20px auto;
+		            border: 1px solid #333;
+		            overflow: hidden;
+		        }
+				#nav {
+				    width: 600px;
+				    height: 250px;
+				    margin: 20px auto;
+				    border: 1px solid #333;
+				    overflow: hidden;
+				}
+				.box1 {
+				    width: 300px;
+				    height: 100px;
+				    margin: 0 auto;
+				    border: 1px solid #333;
+					overflow: hidden;
+				}
+		
+		        div li {
+		            width: 100px;
+		            float: left;
+		            margin: 0 10px;
+		        }
+		
+		        div li p {
+		            width: 100%;
+		        }
+		
+		        div ul {
+		            width: 100%;
+		            height: 100px;
+		        }
+				
+			</style>
+
+	</head>
+	<body>
+		<div id="box">
+		        <ul>
+		            <li>
+		                <a class="aa01" href="#">a</a>
+		                <p>A</p>
+		            </li>
+		            <li>
+		                <a href="#">b</a>
+		                <p>B</p>
+		            </li>
+		            <li>
+		                <a href="#">c</a>
+		                <p>C</p>
+		            </li>
+		            <li>
+		                <a href="#">d</a>
+		                <p>D</p>
+		            </li>
+		            <li id="item05">
+		                <a href="#">e</a>
+		                <p>E</p>
+		            </li>
+		        </ul>
+		    </div>
+		<script>
+		$(function(){
+		//先隐藏p
+			//$('ul li img').css('display','none');
+			$('ul li p').hide();
+		//鼠标移入显示
+			$('ul li').mouseover(function(){
+			//获取当前鼠标移入的你的位置
+				var index=$(this).index();
+			//设置所有的li下的p隐藏
+				$('ul li p').hide();
+				//$('ul li p').fadeOut();//渐渐消失
+				//$(this).parent().children().find('p').hide();
+				//$(this).parent().find('li').find('p').hide();
+			//设置当前位置的li的p显示
+				$(this).children('p').show();
+				//$('ul li').eq(index).children('p').show();
+				//$('ul li').eq(index).children('p').fadeIn();//渐渐显示
+			});
+		//鼠标移出隐藏
+		    $('ul li').mouseleave(function(){
+				$('ul li p').hide();
+			});
+		})   
+		$(document).ready(function(){
+			$("ul li p").hover(function(){
+				$(this).stop(true,true).animate({fontSize:45},100);
+				
+			},function(){
+				$(this).stop(true,true).animate({color:red},100)
+			});
+		})
+		</script>
+		
+		<div id="nav">
+			<ul>
+				<li>
+				    <a href="#">a</a>
+				</li>
+				<li>
+				    <a href="#">b</a>
+				</li>
+				<li>
+				    <a href="#">c</a>
+				</li>
+			</ul>
+			<div class="container">
+				<div class="box1">
+					<p>1</p>
+				</div>
+				<div class="box1">
+					<p>2</p>
+				</div>
+				<div class="box1">
+					<p>3</p>
+				</div>
+			</div>
+		</div>
+		<script>
+			$(function(){
+				$('.box1').hide();
+				$('ul li').click(function(){//点击
+					//$('ul li').mouseover(function(){//鼠标移入
+					//获取当前点击的li的下标位置
+					var index=$(this).index();
+					
+					//让container部分 .box1（第n个）显示,其他box1隐藏
+					$('.container').children('.box1').eq(index).show('slow').siblings().hide();
+					//});
+				})
+			})
+		</script>
+		
+		</script>
+	</body>
+</html>

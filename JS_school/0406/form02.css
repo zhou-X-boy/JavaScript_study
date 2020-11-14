@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+input {
+    /* 外轮廓 */
+    outline: none; 
+    border: none;
+}
+
+i.red {
+    color: red;
+    font-style: normal;
+}
+
+ul {
+    width: 660px;
+    padding: 20px 0;
+    margin: 0 auto;
+    background-color: #f0f0f0;
+    overflow: hidden;
+    text-align: center;
+}
+
+ul li {
+    display: block;
+    margin-bottom: 20px;
+}
+/* 在浮动元素的父级上设置清除浮动 */
+ul li:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+ul>li>label {
+    /* em是倍数，以字号为参考值 */
+    width: 10em;
+    height: 2em;
+    line-height: 2em;
+    float: left;
+    font-size: 20px;
+    text-align: right;
+}
+
+ul>li>input {
+    width: 260px;
+    display:block;
+    font-size: 20px;
+    border-radius: 3px;
+}
+
+ul>li>input[type=text]{
+    float: left;
+    text-align: left;
+    line-height: 2em;
+    text-indent: 1em;
+    border: 1px solid #333;
+}
+
+ul>li>input[type=submit] {
+    width: 360px !important;
+    height: 60px;
+    line-height: 60px;
+    margin-top: 50px;
+    margin-left: 100px; 
+    text-align: center;
+    background-color: crimson;
+    color: #fff;
+}
+ul>li>input+span{float: left;
+    margin-left: 6px; 
+	font-weight: normal; 
+	color: red; 
+	font-size: 14px;
+	line-height: 40px;
+}
+ul>li>input+span.tips{
+    /* display: none; */
+}
+.show{ 
+	display:block !important;
+}
+
+.green{ 
+	color: rgb(25, 230, 25)  !important;
+} 
+ul li select{
+    width: 260px;
+	height: 40px;
+	line-height: 40px;
+    float: left;
+}
+textarea{
+    float: left;
+    width: 260px;
+}

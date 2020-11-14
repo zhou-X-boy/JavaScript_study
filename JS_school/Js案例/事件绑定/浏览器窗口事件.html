@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="js/jquery-1.10.2.js"></script>
+		<style>
+			#box1{
+				width: 1000px;
+				height: 3000px;
+				border: 1px solid blue;
+			}
+			p{
+				position: fixed;
+				top: 200px;
+				left: 10px;
+			}
+			#a1{
+				top: 150px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box1">
+			<textarea rows="6" cpls="10">党的十八大报告提出，要大力加强社会主义核心价值体系建设，“倡导富强、民主、文明、和谐，倡导自由、平等、公正、法治，倡导爱国、敬业、诚信、友善，积极培育和践行社会主义核心价值观”。</textarea> 
+			<p id="a1">滚动文本域<b id="timestxt">0</b>次</p>
+			<p>滚动网页<b id="timeswindow">0</b>次</p>
+			
+		</div>
+		<script>
+			$(document).ready(function(){
+				//resize:当调整浏览器窗口的大小时
+				$(window).resize(function(){
+					alert("你调整了一次窗口")
+				});
+				var x=0;
+				//scroll()：当元素滚动或者用户滚动浏览器窗口时
+				$(":input").scroll(function(){
+					//$("#times").text(x++);
+					$("#times").html(x+=1);
+				});
+				$(window).scroll(function(){
+					//$("#times").text(x++);
+					$("#timeswindow").html(x+=1);
+				});
+				
+				var y=0;
+				$("textarea").scroll(function(){
+					$("#timestxt").text(++y);
+				});
+			})
+		</script>
+	</body>
+</html>

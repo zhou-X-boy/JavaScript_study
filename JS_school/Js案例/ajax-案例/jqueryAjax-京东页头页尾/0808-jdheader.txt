@@ -1,0 +1,10 @@
+<!--页头-->
+<link rel='stylesheet' type='text/css' href='css/jd-header.css'>
+<img src='images/logo.png' />
+<ul class="nav">
+    <li><a href="#">首页</a></li>
+    <li><a href="#">新闻</a></li>
+    <li><a href="#">产品</a></li>
+    <li><a href="#">关于</a></li>
+</ul>
+<hr>

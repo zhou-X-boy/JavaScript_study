@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>jQuery遍历</title> 
+<script src="js/jquery-1.10.2.js"></script>
+
+<style type="text/css">
+ul { list-style: none  }
+* { margin: 0;  padding: 0; }
+div { width: 1200px;  height: 500px;  margin: 50px auto;  border: 1px solid red;   overflow: hidden;}
+div li { width: 200px;     float: left; margin:0 10px; }
+div li img{  width: 100%; }
+div ul { width:100%;}
+
+
+</style>
+
+</head>
+
+<body>
+<h3>demo0401：jquery遍历--后代元素</h3> <br>
+<div id="box">
+    <ul id="list">
+        <li class="a1">
+            <a href="#">我是第1张图  <b>我是加粗的字</b></a>
+            <img src="images/1.jpg"/>
+            <ul><li>哈哈 <img src="images/1.jpg"/></li></ul>
+        </li>
+        <li><a href="#">我是第2张图</a><img src="images/2.jpg"/></li>
+        <li><a href="#">我是第3张图</a><img src="images/3.jpg"/></li>
+        <li class="item"><a href="#">我是第4张图</a><img src="images/4.jpg"/></li>
+        <li class="item"><a href="#">我是第5张图</a><img src="images/5.jpg"/></li>
+    </ul> 
+</div>
+<ul><li>另一个列表</li></ul>
+<div ><p>1 </p><p>2</p><p>3</p><p>4</p></div>
+<script>
+$(function(){ 
+	 //子元素：儿子辈的
+	 $("#list").children(".item").css('border','2px solid red'); 
+   // $("#box ul").children().css('border','5px solid blue'); 
+
+
+     //find() 小括号为空，函数是不会执行，不会选中/遍历到任何后代元素。
+    // $("#box").find().css('border','2px solid blue');  
+    $("#box").find("a").css('border','8px solid blue'); 
+})
+</script>
+
+ 
+</body>
+</html>
+
+
+
+
+

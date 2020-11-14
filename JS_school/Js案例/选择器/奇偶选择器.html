@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="js/jquery-1.10.2.js"></script>
+	</head>
+	<body>
+		<ul class="list">
+			<li>A</li>
+			<li>B</li>
+			<li>C</li>
+			<li>D</li>
+		</ul>
+		<script>
+		$(function(){
+			//奇偶选择器
+			//$("ul.list>li:odd").css("color","red");//奇数
+			//$(".list li:even").css("color","green");//偶数
+			
+			//第一个li
+			//$(".list li:first").css("font-size","30px");
+			//最后一个li
+			//$(".list li:last").css("color","blue");
+			
+			//索引选择器，注意index是从0开始
+			$("ul.list li:eq(0)").css("color","#f16ffa");
+			$("ul.list li:eq(1)").css("color","red");
+			
+			//选取序号index大于1的li
+			//$("ul.list li:gt(1)").css("color","red");
+			//选取序号index小于1的li
+			//$("ul.list li:lt(1)").css("color","blue");
+		});
+		</script>
+	</body>
+	
+</html>

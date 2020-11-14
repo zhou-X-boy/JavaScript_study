@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="js/jquery-1.10.2.js"></script>
+		<style>
+            ul{
+				width: 500px;
+				height: 240px;
+				display: inline-block;
+			}
+			ul.list1{
+				background-color: bisque;
+			}
+			ul.list2{
+				background-color: aqua;
+			}
+			li{
+				display: block;
+			}
+			.red{
+				color: red;
+			}
+			.blue{
+				color: blue;
+			}
+			.font{
+				font-size: 30px;
+			}
+			.bgblue{
+				background-color: blue;
+			}
+		</style>
+	</head>
+	<body>
+		<ul class="list1">
+			<li class="li1">1</li>
+			<li>2</li>
+			<li class="li3">3</li>
+			<li>4</li>
+			<li class="li5">5</li>
+		</ul>
+		<ul class="list2">
+			<li class="li01">1</li>
+			<li>2</li>
+			<li class="li03">3</li>
+			<li>4</li>
+			<li class="li05">5</li>
+		</ul>
+		<script>
+			$(document).ready(function(){
+				//遍历类名li03的li元素的所有兄弟元素
+				//$('.li03').siblings().addClass('red');
+				//遍历他后面的一个的兄弟元素
+				$('.li03').next().addClass('blue');
+				//遍历它后面的所有兄弟元素
+				$('.li03').nextAll().addClass('font');
+				//遍历它前面的一个兄弟元素
+				$('.li03').prev().addClass('red');
+				//遍历它前面的所有兄弟元素
+				$('.li03').prevAll().addClass('bgblue');
+				
+				//遍历当前元素后面的兄弟元素们，直到遇见selector，但不包括selector
+				$('.li3').nextUntil('.li5').css('backgroundColor','green')
+				//遍历当前元素前面的兄弟元素们，直到遇见selector，但不包括selector
+                $('.li3').prevUntil('.li1').css('backgroundColor','yellow')
+			})
+		</script>
+	</body>
+</html>

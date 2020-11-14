@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>AJAX</title>
+</head>
+
+<body>
+    <!-- <form id="form"> -->
+    <button id="btn">发起异步HTTP请求，并接收响应</button>
+    <!-- </form> -->
+    <script>
+        btn.onclick = function() {
+            //步骤1：创建xhr对象
+            //var xhr = new XMLHttpRequest();
+            var xhr;
+            if (window.XMLHttpRequest) {
+                //  IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
+                xhr = new XMLHttpRequest();
+            } else {
+                // IE6, IE5 浏览器执行代码
+                xhr = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            //步骤2：监听XHR的状态改变：监听服务器返回响应消息的事件
+            xhr.onreadystatechange = function() {
+                console.log('\nxhr状态改变啦：' + xhr.readyState);
+                console.log('响应状态码：' + xhr.status); //xhr的状态码变成2之后才有值，也就是不为0
+                console.log('响应主体：' + xhr.responseText); //xhr的状态码变成3之后才有值，也就是不为空
+            }
+
+            //步骤3：打开到服务器的连接：使用XHR对象连接到服务器
+            // xhr.open(method,  uri,  isAsyn);
+            xhr.open('get', '0801-xhr.txt', true);
+
+            //步骤4：发送请求消息
+            // send(body/null )：发送请求消息
+            xhr.send(null);
+        };
+    </script>
+</body>
+
+</html>

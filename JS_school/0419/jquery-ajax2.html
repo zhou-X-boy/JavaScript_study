@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+	</head>
+	<style>
+		#show{
+			background:orange;
+            border:1px solid red;
+            width:300px;height:200px;
+
+		}
+	</style>
+	<body>
+        <p><span>输入姓名</span>:<input type="text" id="username" /></p>
+        <p><span>输入密码:</span><input type="text" id="password" /></p>
+		<p><span>输入学校:</span><input type="text" id="sc" /></p>
+        <p><span>个人简介:</span><input type="text" id="info"></p>
+		<button id="btn">提交</button>	
+		<div id="show">
+        
+        </div>
+        
+        <script>
+            $('#btn').click(function(){
+                var uname = $('#username').val();
+                var password = $('#password').val();
+                var sc = $('#sc').val();
+                var info = $('#info').val();
+                $.ajax({
+                    url:'jquery-ajax2.php',
+                    type:'GET',
+                    data:{uname:uname,password:password,sc:sc,info:info},
+                    success: function(json){
+                        $('#show').append('姓名是:'+json.uname+"<br/>密码是:"+json.password+"<br/>学校是:"+json.sc+"<br/>个人简介:"+json.info);
+                    },
+                    error: function(xhr){
+                        console.log('响应失败的回调函数：error');
+                        console.log('响应消息状态码xhr.status:'+xhr.status);
+                    }
+                })
+            })
+        </script>
+	</body>
+	
+</html>

@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>jQuery添加类名</title>
+    <script src="js/jquery-1.10.2.js"></script>
+    <style type="text/css">
+        .cls {
+            background-color: darkseagreen;
+        }
+
+        .cls2 {
+            font-size: 30px;
+        }
+
+        .para {
+            color: blueviolet;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h3>demo302：jQuery添加类名</h3>
+    <ul id="ddv">
+        <li>茄子</li>
+        <li>
+            <p class="para">西红柿</p>
+        </li>
+        <li>鲜花</li>
+        <li>鲜花</li>
+    </ul>
+    <a class="link" id="aa">猜猜 我的类名是不是link?? </a>
+    <script>
+        $(function () {
+            //添加类名 addClass()
+            //  $("#ddv li:first").addClass("cls").addClass("cls2");
+            //  $("#ddv li:last").addClass("cls cls2");
+
+            //移除类名  removeClass()
+            //  $("#ddv li:eq(1) p").removeClass('para1');
+
+
+            //判断有类名吗？  hasClass()
+            // if ($("#aa").hasClass("link")) {
+            //     alert('#aa有个类名叫：link');
+
+            // }
+        })
+    </script>
+
+
+</body>
+
+</html>

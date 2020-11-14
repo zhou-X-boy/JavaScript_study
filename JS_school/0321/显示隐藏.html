@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="js/jquery-1.10.2.js"></script>
+		<style>
+			ul {
+			    list-style: none
+			}
+					
+			* {
+			    margin: 0;
+			    padding: 0;
+			}
+			#nav {
+			    width: 1000px;
+			    height: 700px;
+			    margin: 10px auto;
+			    border: 1px solid #333;
+			    overflow: hidden;
+			}
+			.box1 {
+			    width:100%;
+			    height: 698px;
+			    margin: 0 auto;
+			    border: 1px solid #333;
+				overflow: hidden;
+			}
+			#logo{
+				float: left;
+			}
+			#nav ul {
+			    width: 100%;
+			    height: 70px;
+				border: 1px solid black;
+			}
+			#nav ul li {
+			    width: 83px;
+				height: 70px;
+			    float: left;
+			    margin-left: 30px;
+			}
+			#shouye{
+				background-color: indianred;
+			}
+			a{
+				margin: 0;
+				font-size: 15px;
+				margin-left: 23px;
+				line-height: 60px;
+				text-decoration:none
+			}
+			p{
+				text-align: center;
+				margin-top: 30px;
+			}
+			#ma{
+				margin-left: 365px;
+			}
+			h3{
+				margin-left: 210px;
+				margin-top: 20px;
+			}
+			.a{
+				margin-left: 210px;
+				
+			}
+		</style>
+	</head>
+	<body>
+		<div id="nav">
+			<img id="logo" src="logo.png" />
+			<ul>
+				<li id="shouye">
+				    <a href="#">首页</a>
+				</li>
+				<li>
+				    <a href="#">导航犬</a>
+				</li>
+				<li>
+				    <a href="#">谐音找句</a>
+				</li>
+				<li>
+				    <a href="#">个性网名</a>
+				</li>
+				<li>
+				    <a href="#">关于</a>
+				</li>
+			</ul>
+			<div class="container">
+				<div>
+					<p>文案狗</p>
+				</div>
+				<div class="box1">
+					<p>欢迎关注文案狗微信服务号进行查询!</p>
+					<img id="ma" src="qrcode.jpg"/>
+				</div>
+				<div class="box1">
+					<h3>营销与创意</h3>
+					<div class="a">
+					    <a>addog</a>
+						<a>场库</a>
+						<a>我是文案</a>
+						<a>麦迪逊邦</a>
+					</div>
+					<h3>素材设计类</h3>
+					<div class="a">
+					    <a>稿定设计</a>
+						<a>包图网</a>
+						<a>变设龙</a>
+						<a>人人秀</a>
+					</div>
+				</div>
+				<div class="box1">
+					<h3>谐音工具</h3>
+					<div class="a">
+					    <a>常用词语</a>
+						<a>诗句名词</a>
+						<a>俗语大全</a>
+                    </div>
+				</div>
+				<div class="box1">
+					<h3>个性网名/游戏ID生成工具</h3>
+					<div class="a"> 
+						<a>精准模式</a>
+						<a>谐音模式</a>
+					</div>
+				</div>
+				<div class="box1">
+					<h3>关于文案狗</h3>
+					<div class="a">
+						只希望能给文案狗们带来一点灵感，有更多创意文案需求可留言交流。<br/>contact: i@wenangou.com 
+					</div>
+				</div>
+		        
+		    </div>
+		</div>
+		<script>
+			$(function(){
+				$('.box1').hide();
+				$('ul li').click(function(){//点击
+					//获取当前点击的li的下标位置
+					var index=$(this).index();
+					//让container部分 .box1（第n个）显示,其他box1隐藏
+					$('.container').children('.box1').eq(index).show().siblings().hide();
+					
+				})
+			})
+		</script>
+	</body>
+</html>

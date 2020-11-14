@@ -1,0 +1,9 @@
+$(function(){
+	$(".xia").hide();
+	$(".nav").mouseover(function(){
+		$('.xia').slideDown(200);
+	})
+	$(".xia").mouseleave(function(){
+		$('.xia').slideUp(200);
+	})
+})

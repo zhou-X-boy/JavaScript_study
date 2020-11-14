@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="js/jquery-1.10.2.js"></script>
+	</head>
+	<body>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+				outline: none;
+			}
+			button{
+				width: 100px;
+				height: 40px;
+				line-height: 40px;
+				font-size: 24px;
+			}
+			.box{
+				width: 600px;
+				height: 600px;
+				border: 1px solid #333;
+				
+			}
+			#move{
+				width: 100px;
+				height: 100px;
+				background-color: red;
+				border-radius: 50%;
+				top:0;
+				left: 0;
+			}
+		</style>
+	</body>
+	<button onclick="ani()">animate</button>
+	<button onclick="stop()">stop</button>
+	<div class="box">
+		<p id="move">动</p>
+	</div>
+	<script>
+		var move=$("#move")
+		function ani(){
+			//animate({css}.speed);
+			// $("#move").animate({width:300},3000);
+			// $("#move").animate({height:300},3000);
+			// $("#move").animate({fontSize:25},3000);
+			
+			// $("#move").animate({width:300,height:300,fontSize:50,paddingTop:100,borderWidth:20},3000);
+			
+			move.animate({width:300},1000)
+			    .animate({height:300},1000)
+				.animate({width:600},1000)
+				.animate({height:600},1000)
+					  
+		}
+		function stop(){
+			//stop([stopAll],[gotoEnd])
+			//stopAll:是否停止所有动画
+			//gogotoEnd:是否完成当前动画
+			
+			//1:停止当前的动画，不完成当前的动画，而是继续下一个animate程序运行
+			//move.stop(false,false);
+			
+			//2:停止当前的动画+完成当前的动画
+			//move.stop(false,true);
+			
+			//3：停止当前的动画+不完成当前的动画，后面所有的动画都不执行，停止所有的动画
+			//move.stop(true,false);
+			
+			//4:停止当前的动画+完成当前的动画，后面的所有动画都不执行，停止所有动画
+			move.stop(true,true)
+		}
+	</script>
+</html>

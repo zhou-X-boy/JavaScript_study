@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<a href="http://www.baidu.com">href链接；打开一个新页面</a><br />
+		<a href="javascript:window.history.go(-1);">history.go(-1):返回上一页</a><br />
+		<a href="javascript:window.history.back();">history.bcak():返回上一页</a><br />
+		<a href="javascript:window.history.go(0);">history.go(0):刷新</a><br />
+		<a href="javascript:window.history.go(1);">history.go(1):去下一页</a><br />
+		<a href="javascript:window.history.forward();">history.forward():去下一页</a><br />
+		<script>
+			function broswer(){
+			//location 修改获取地址
+			window.location.href;//获取当前地址栏的地址URl
+			//window.location.href="http://www.baidu.com";
+			window.location.port;
+			window.location.hostname;
+			window.location.protocol;
+			window.location.reload([true])
+			//window.location.assign("http://www.baidu.com");
+			//window.location.replace("http:www.baidu.com");
+			
+			//history 可以通过history来实现刷新，上一步，下一步
+			window.history.forward();//下一步
+			window.history.back();//上一步
+			window.history.go(0);//接收参数0，表示刷新当前页面
+			window.history.go(1);//接收正整数，表示前进一个页面
+			window.history.go(-2);//接收负整数，表示后退两个页面
+			
+			//screen 可以获取浏览器窗口外部的显示器的信息，如像素宽度高度等
+			window.screen.width;//返回当前屏幕宽度(分辨率值)
+			window.screen.height;//返回当前屏幕高度(分辨率值)
+			window.screen.availHeight;//返回当前屏幕高度（空白空间）
+			window.screen.availWidth;////返回当前屏幕宽度（空白空间）减去诸如窗口工具栏的宽度
+			window.outerHeight;//浏览器的高度，包括工具栏和滚动条
+			window.outerWidth;//浏览器的宽度，
+			window.innerHeight;//浏览器中的空白部分--没有工具栏
+			
+			window.document.body.offsetHeight;//返回当前网页的高度
+			window.document.body.offsetWidth;//返回当前网页的宽度
+			}
+			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="js/jquery-1.10.2.js"></script>
+	</head>
+	<body>
+		<input type="text" value="文本" id="txt"/>
+		<p id="para">段落</p>
+		<ul id="box">盒子</ul>
+		<script>
+			//val() 设置或返回被选元素的值
+			$("#txt").val("新的value值");//设置value值
+			$("#txt").val();
+			
+			//text(); 设置或返回被选元素的文本内容
+			$("#para").text("新的段落");
+			$("#para").text();
+			
+			//html(); 设置被选元素的内容包括标签
+			$("#box").html("<li>新的盒子</li>")
+			$("#box").html();
+		</script>
+	</body>
+</html>

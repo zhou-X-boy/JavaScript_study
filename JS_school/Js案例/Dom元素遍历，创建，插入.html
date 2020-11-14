@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<ul id="list">
+			<li id="item01">
+				<a href="#">a</a>
+			</li>
+			<li id="item02">
+				<a href="#">b</a>
+			</li>
+			<li id="item03">
+				<a href="#">c</a>
+			</li>
+		</ul>
+		<script>
+			//Dom元素遍历
+			//查找所有的子元素节点集合
+			//childNodes属性返回节点的子节点集合，以NodesList对象
+			var list=document.getElementById("list");
+			list.childNodes.length;//查找所有的子元素节点
+		    //获取第一个子节点
+			list.firstChild;
+			//获取最后一个子节点
+			list.lastChild;
+			
+			//查找父元素节点 
+			//parentNode属性以Node对象的形式返回指定节点的父节点
+			var item01=document.getElementById("item01");
+		    item01.parentNode.innerHTML;
+		    //兄弟节点--前一个节点
+			var item02=document.getElementById("itom02");
+			//item02.previousSibling.innerHTML;
+			//兄弟节点--紧邻的后一个节点
+			//item02.nextSibling.innerHTML;
+		</script>
+		<script>
+			//插入子节点--appendChild
+			var List=document.getElementById('list');
+			//步骤1：创建元素节点
+			var li=document.createElement('li');
+			//步骤2：创建文本节点
+			/*var txt=document.createTextNode('d');
+			li.appendChild(txt);*/
+			li.innerHTML='<a href="#">d</a>'
+			//步骤3：创建属性节点
+			li.setAttribute('id','itemNew');
+			//步骤4：将创建的元素节点，添加到ul#list
+			list.appendChild(li);
+			
+			//在某一个子节点前面插入新节点  insertBefore();
+			//步骤1：创建新的节点
+			var liNew=document.createElement('li');
+			//步骤2：给新来的元素添加内容
+			liNew.innerHTML='新加的';
+			//步骤3：找到父级元素
+			var list=document.getElementById('list')
+			//步骤4：找到item01
+			var itemo1=document.getElementById('item01');
+			//实现插队
+			list.insertBefore(liNew,item01);
+			
+			//移除子节点
+			li.remove();
+			var item02=document.getElementById('item02');
+			list.removeChild(item02);
+		</script>
+	</body>
+</html>

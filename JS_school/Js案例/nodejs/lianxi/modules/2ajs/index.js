@@ -1,0 +1,1 @@
+exports.data="我是目录模块中的index.js"

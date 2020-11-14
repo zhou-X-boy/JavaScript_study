@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>jQuery遍历</title>
+    <script src="js/jquery-1.10.2.js"></script>
+
+    <style type="text/css">
+        ul {
+            list-style: none
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            width: 1200px;
+            height: 500px;
+            margin: 50px auto;
+            border: 1px solid #333;
+            overflow: hidden;
+        }
+
+        div li {
+            width: 200px;
+            float: left;
+            margin: 0 10px;
+        }
+
+        div li img {
+            width: 100%;
+        }
+
+        div ul {
+            width: 100%;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h3>demo0401：jquery遍历--兄弟元素</h3>
+    <br>
+    <div id="box">
+        <ul>
+            <li id="item01">
+                <a href="#">我是第1张图</a>
+                <img src="images/1.jpg" />
+            </li>
+            <li id="item02" class="haha">
+                <a href="#">我是第2张图</a>
+                <img src="images/2.jpg" />
+            </li>
+            <li class="three">
+                <a href="#">我是第3张图</a>
+                <img src="images/3.jpg" />
+            </li>
+            <li class="four">
+                <a href="#">我是第4张图</a>
+                <img src="images/4.jpg" />
+            </li>
+            <li id="item05">
+                <a href="#">我是第5张图</a>
+                <img src="images/5.jpg" />
+            </li>
+        </ul>
+    </div>
+    <script>
+        $(function () {
+            //1 next() 紧邻的前面的同胞元素
+            //  $("#item01").next(".four").css('border','6px solid #ff0000');
+            // $("#item01").next(".haha").css('border','6px solid #ff0000');
+            // $("#item01").next().css('border','6px solid #ff0000');
+
+            //  2).prev(selector)：紧邻的前面的同胞元素
+             //  $("#item05").prev(".four").css('border','6px solid #ff0000'); 
+
+            // 3).siblings(selected)：所有同胞元素
+           // $("#item01").siblings().css('border','6px solid #ff0000');
+
+            // 4).nextAll()：后面的所有同胞元素
+           // $("#item02").nextAll().css('border','6px solid #ff0000');
+
+            // 5).nextUtil() ：后面的同胞元素,直到遇见selector
+           // $("#item02").nextUntil('#item05').css('border','6px solid #ff0000');
+         // var item05= document.getElementById("item05");
+          // $("#item02").nextUntil(item05,'li').css("background-color", "red");
+          
+
+        })
+    </script>
+
+
+</body>
+
+</html>

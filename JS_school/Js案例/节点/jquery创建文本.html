@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="js/jquery-1.10.2.js"></script>
+	</head>
+	<body>
+		<div id="box">
+		    这是个盒子
+		</div>
+		<button id="btn">追加文本</button>
+		<script>
+			$(function(){
+				$('#btn').click(function(){
+					//Jquery追加元素的方法appen()
+					var txt1='<p>html追加的段落</p>';//创建文本
+					$('#btn').append(txt1);//jquery追加元素的方append()
+					//DOM对象创建文本
+					var para=document.createElement('p');
+					para.innerHTML='dom对象追加的文本(1)';
+					$('#box').append(para);
+					var txt2=document.createTextNode('dom追加的文本(2)');
+					document.getElementById('box').appendChild(txt2);
+					//jquery追加文本
+					var txt3=$('<p></p>');
+					txt3.text('jquery追加的段落，先创建再设置文本');
+					$('#box').append(txt3);
+				})
+			})
+		</script>
+	</body>
+</html>

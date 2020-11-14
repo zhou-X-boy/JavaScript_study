@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="js/jquery-1.10.2.js"></script>
+		<style>
+			*{ 
+				margin:0; 
+			    padding:0;
+			}
+		    ul{ 
+				list-style:none;
+			}
+		    .header{
+			   width:1000px;
+			   height:80px;
+			   margin: 20px auto;
+			   background-color:rgba(0,0,0,0.9);
+			}
+			.header li{
+				background-color: rgba(0,0,0,0.2);  
+				height: 40px;
+				width: 120px;
+				margin-left: -10px;
+			}
+			.header >ul >li{
+				float:left; 
+				margin-left:40px; 
+				width:100px; 
+				position: relative;
+				margin-top: 10px;
+			}
+			.head {
+				display: block; 
+				text-decoration: none; 
+				color: #fff; 
+				line-height: 40px; 
+				text-align: center;
+			}
+			.head:hover{
+				color: yellow;
+			}
+			span{
+				display: block;
+				text-decoration: none; 
+				color: #FFFFFF;
+				text-align: center;
+				margin-top: -18px;
+				font-size: 12px;
+			}
+			span:hover{
+				color: #FFFF00;
+			}
+			.xia{
+				display: block;
+				text-decoration: none; 
+				color: #FFFFFF;
+				text-align: center;
+			}
+			.xia:hover{
+				color: #FFFF00;
+			}
+			.header li ul {
+				position: absolute;  
+				top: 60px;
+			    display: none;
+			}
+			#a{
+				color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="header">
+				<ul>
+		            <li><a href="#" class="head">官网首页<span>HOME</span></a></li>
+		            <li>
+			            <a class="head" href="#">游戏资料<span>DATA</span></a>
+						<ul class="xia">
+		                    <li><a href="#" class="xia">版本介绍</a></li>
+		                    <li><a href="#" class="xia">游戏介绍</a></li>
+		                    <li><a href="#" class="xia">英雄资料</a></li>
+		                </ul>
+					</li>
+					<li>
+					    <a href="#" class="head">内容中心<span>CONTENTS</span></a>
+						<ul>
+					        <li><a href="#" class="xia">攻略中心</a></li>
+					        <li><a href="#" class="xia">英雄攻略</a></li>
+					        <li><a href="#" class="xia">视频中心</a></li>
+					    </ul>
+					</li>
+					<li>
+					    <a href="#" class="head">赛事中心<span>MATCH</span></a>
+						<ul>
+					        <li><a href="#" class="xia">冬季冠军杯</a></li>
+					        <li><a href="#" class="xia">kpl</a></li>
+					    </ul>
+					</li>
+					<li>
+					    <a href="#" class="head">百态王者<span>CULTURE</span></a>
+						<ul>
+					        <li><a href="#" class="xia">荣耀传承</a></li>
+					        <li><a href="#" class="xia">王者文化站</a></li>
+					        <li><a href="#" class="xia">王者音乐所</a></li>
+					    </ul>
+					</li>
+					<li>
+					    <a href="#" class="head">社区互动<span>COMMUNITY</span></a>
+						<ul>
+					        <li><a href="#" class="xia">创意互动营</a></li>
+					        <li><a href="#" class="xia">王者营地</a></li>
+					        <li><a href="#" class="xia">官方微博</a></li>
+					    </ul>
+					</li>
+					<li>
+					    <a href="#" class="head">玩家支持<span>PLAYER</span></a>
+						<ul>
+					        <li><a href="#" class="xia">成长守护平台</a></li>
+					        <li><a href="#" class="xia">健康系统</a></li>
+					        <li><a href="#" class="xia">客户专区</a></li>
+					    </ul>
+					</li>
+				</ul>
+		    </div>
+		<script>
+			$(function(){
+				$(".header>ul>li").mouseover(function (){
+			    $(this).children("ul").show();
+			});
+		    $(".header>ul>li").mouseout(function (){
+			    $(this).children("ul").hide();
+			});
+		});
+		</script>
+		
+		<fieldset>
+			    <legend>层次选择器</legend>
+				<input type="button" id="btn" value="显示效果"/>
+			    <div id="box" style="border: 1px solid black;">
+			    	<p>蓝色</p>
+			    	<ul>
+			    		<li><p>颜色</p></li>
+			    	</ul>
+			    	<p>蓝色</p>
+			    </div>
+			    <p>黄色</p>
+			    <p>红色</p>
+			    <p>红色</p>
+		</fieldset>
+		<script>
+			$(function(){
+				$("#btn").click(function(){
+				$("#box~p").css("color","red");//div后面所有直接的兄弟元素p标签元素
+				$("#box>p").css("color","blue");//div里面所有的直接p标签
+				$("#box+p").css("color","yellow");//div后面的第一个p标签元素
+				});
+			})
+		</script>
+		
+		<fieldset>
+			<legend>奇偶选择器</legend>
+			<p>奇数列红色，偶数列绿色</p>
+			<ul class="list">
+				<li>A</li>
+				<li>B</li>
+				<li>C</li>
+				<li>D</li>
+			</ul>
+			<script>
+			$(function(){
+				$("ul.list>li:odd").css("color","red");//奇数
+				$(".list li:even").css("color","green");//偶数
+			})
+			</script>
+		</fieldset>
+		
+		<fieldset>
+			<legend>索引选择器</legend>
+			<p>下标为0的元素显示粉色，下标为1的显示黄色</p>
+			<ul class="one">
+				<li>A</li>
+				<li>B</li>
+				<li>C</li>
+				<li>D</li>
+			</ul>
+			<script>
+			$(function(){
+				$("ul.one li:eq(0)").css("color","#f16ffa");
+				$("ul.one li:eq(1)").css("color","yellow");
+			})
+			</script>
+		</fieldset>
+		
+		<fieldset>
+			<legend>属性选择器</legend>
+			<p class="ppp">
+			<a href="#">href值等于#的元素显示红色</a>
+			<a class="link" target="_self">target值为'_self'的元素显示绿色</a>
+			<input type="text" value="type值为text的元素显示黄色"/>
+			<script>
+				$(function(){
+					$(".ppp a[href='#']").css("color","red");
+					$(".ppp a[target='_self']").css("color","green");
+					$(":text").css("color","yellow");
+				})
+			</script>
+		</fieldset>
+	</body>
+</html>

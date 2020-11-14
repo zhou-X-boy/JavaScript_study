@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>成绩等级划分</title>
+<script>
+function grade()
+{
+	var score=prompt("请输入成绩：");
+	if(score<60){ alert("不及格");}
+	else{
+		if (score<70){alert("及格");	}
+		else{
+			if (score<80){alert("中等");	}
+			else{
+				if (score<90){alert("良好");}
+				else {alert("优秀");}
+			}
+		}
+	}
+}
+</script>
+</head>
+<body>
+ 
+    <div onClick="grade()">考试成绩测试</div>
+ 
+</body>
+</html>

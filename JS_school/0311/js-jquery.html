@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="js/jquery-1.10.2.js"></script>
+	</head>
+	<body>
+		<input type="button" value="开灯" id="btn1" />
+		<script type="text/javascript">
+		//js写法
+		window.onload=function(){
+			var bt1=document.getElementById("btn1")
+			bt1.onclick=function(){
+				if(this.value=="开灯"){
+					this.style.backgroundColor="black";
+					this.style.color="#fff";
+					this.value="关灯";
+				}else{
+					this.style.backgroundColor='white';
+					this.style.color='black';
+					this.value='开灯';
+				}
+			}
+		}
+		</script> 
+		<input type="button" value="天黑请闭眼" id="btn2"/>
+		<script type="text/javascript">
+		//jQuery写法
+		$(function(){
+			console.log(document.getElementById("btn2").value);
+			console.log($('#btn2').val());
+			$("#btn2").click(function(){
+				if( $(this).val()=='天黑请闭眼' ){
+					$(this).val('天亮请睁眼');
+					$(this).css("backgroundColor","black");
+					$(this).css("color","white");
+					
+				}else{
+					$(this).val('天黑请闭眼');
+					$(this).css("backgroundColor","white");
+					$(this).css("color","black");
+				}
+			});
+		});
+		</script> 
+	</body>
+</html>

@@ -1,0 +1,178 @@
+*{
+	margin: 0;
+	padding: 0;
+	border: none;
+	outline: none;
+ }
+ div {
+     display: block;
+ }
+ ul li{
+	list-style:none;
+ }
+/* 背景 */
+.bj{
+	 background-image: url("../images/bj.jpg");
+	 overflow: hidden;
+	 position: absolute;
+	 left: 0;
+	 top: 0;
+	 width: 1920px;
+	 height: 2750px;
+	 background-repeat: no-repeat;
+	 background-position: center top;
+ }
+.header {
+	 position: absolute;
+	 width: 1920px;
+	 height: 90px;
+	 background: #000;
+	 background: rgba(0,0,0,0.5);
+}
+/* 导航条 */
+ .nav {
+	 width: 1920px;
+	 height: 90px;
+	 margin: 0 auto;
+	 position: relative;
+	 background-color: #000000;
+	 background: rgba(0,0,0,0.5);
+	 /* border: 1px solid black; */
+ }
+
+/* 导航条内容 */
+ .main-nav {
+	 position: absolute;
+	 width: 790px;
+	 margin-left: 510px;
+	 margin-top: -70px;
+	
+ }
+ #logo{
+	 margin-left: 300px;
+ 	 margin-top: 15px;
+ }
+ .main-nav li {
+	 float: left;
+	 width: 100px;
+	 height: 80px;
+	 text-align: center;
+ }
+ .main-nav a {
+	 display: block;
+	 width: 100px;
+	 height: 60px;
+	 padding: 20px 0 0;
+	 color: #c9c9dd;
+	 font-size: 18px;
+	 line-height: 25px;
+	 text-decoration:none;
+ }
+ .main-nav a:hover {
+	 text-decoration: none;
+	 border-bottom: 2px solid #e4b653;
+ }
+ .main-nav li:hover a {
+	 color: #e4b653;
+ }
+ .main-nav em {
+	 display: block;
+	 padding-top: 5px;
+	 font-size: 12px;
+	 line-height: 16px;
+	 color: #858792;
+ }
+ .main-nav li:hover em {
+	 color: #e4b653;
+ }
+/* 导航条下拉部分 */
+ .xia {
+	 position: absolute;
+	 top: 90px;
+	 left: 0;
+	 width: 100%;
+	 height: 300px;
+	 background: #000;
+	 background: rgba(0,0,0,0.5);
+	 overflow: hidden;
+	 /* border: 1px red solid; */
+ }
+ .xia-nav {
+	 width: 720px;
+	 height: 280px;
+	 margin: 0 auto;
+	 overflow: hidden;
+	 padding-top: 15px;
+	 margin-left: 515px;
+	 /* border: 1px blue solid; */
+ }
+.down-nav {
+	 float: left;
+	 display: inline;
+	 width: 85px;
+	 height: 240px;
+	 margin-left: 15px;
+	 padding: 2px 5px 0;
+	 text-align: center; 
+	 padding-left: 0px;
+	 margin: 0 auto;
+	 /* border: 1px green solid; */
+	 margin-left: 8px;
+}
+.down-nav a {
+	height: 30px;
+	line-height: 25px;
+	display: block;
+	padding: 0;
+	font-size: 14px;
+	color: #c9c9dd;
+	text-decoration: none;
+}
+.down-nav a:hover{
+	color: #e4b653;
+	text-decoration:underline;
+}
+.down-nav li:hover a {
+	 color: #e4b653;
+}
+/* 登录部分 */
+  
+ 
+.login_pannel {
+	position: relative;
+    left: 1250px;
+    top: 8px;
+    width: 182px;
+	/* border: 1px green solid; */
+}
+.clearfix {
+    zoom: 1;
+}
+.pa {
+    position: absolute;
+}
+.user_pic {
+    /* float: left; */
+    margin-right: 7px;
+}
+#toux{
+	margin-left: 5px;
+	margin-top: 15px;
+}
+.per-infor {
+	margin-top: -45px;
+    margin-left: 60px;
+    width: 50px;
+	/* border: 1p solid blue; */
+}
+.per-infor a{
+	color: #858792; font-size: 15px;
+}
+.user-name {
+    color: #858792;
+    white-space: nowrap;
+}
+.user-name a {
+    color: #8ea0b0;
+    margin-left: 10px;
+}

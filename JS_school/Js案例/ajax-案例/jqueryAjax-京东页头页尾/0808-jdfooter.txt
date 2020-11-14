@@ -1,0 +1,10 @@
+<!--页尾-->
+<link rel='stylesheet' type='text/css' href='css/jd-footer.css'>
+<hr>
+<ul class="nav">
+    <li><a href="#">版权</a></li>
+    <li><a href="#">售后</a></li>
+    <li><a href="#">物流</a></li>
+    <li><a href="#">投诉</a></li>
+</ul>
+<p class="copy">版权所有©京东2020</p>

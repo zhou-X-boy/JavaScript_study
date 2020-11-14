@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>成绩等级划分</title>
+<script>
+function grade()
+{
+	var score=parseInt(document.getElementById("fenshu").value/10);   
+	//将输入成绩除以10取整,只判断十位数字
+	switch (score)
+	{
+		case 10:
+		case 9:alert("优秀");break;
+		case 8:alert("良好");break;
+		case 7:alert("中等");break;
+		case 6:alert("及格");break;
+		default:alert("不及格");break;
+	}
+}
+</script>
+</head>
+<body>
+ 
+  <p>
+    <label>成绩：</label>
+    <input type="text" name="fs" id="fenshu">
+    <input type="button" name="button" id="button" value="判断" onClick="grade()">
+  </p>
+  
+  <script>
+  // 请输入你的成绩 ，
+    // 如果大于90分，法拉利，
+    // 如果大于80-90分 宝马
+    // 70-80 大黄蜂
+    // 60-70 拖拉机
+    // 未及格 男人哭吧哭吧不是罪
+    var score = prompt("请输入你的成绩");
+    switch (Math.floor(score / 10)){
+      case 100:
+      case 9:
+        alert("法拉利");
+        break;
+      case 8:
+        alert("宝马");
+        break;
+      case 7:
+        alert("大黄蜂");
+        break;
+      case 6:
+        alert("拖拉机");
+        break;
+      case 5:
+      case 4:
+      case 3:
+      case 2:
+      case 1:
+      case 0:
+        alert("哭吧哭吧不是罪！");
+        break;
+      default :
+        alert("你的分数有误");
+        break;
+    }
+    // 注意：
+    //a.小括号里面可以写 变量、表达式。 case项后面的代码 只要是符合js语法都行。
+    //b.在执行switch-case结构的时候遇到了break，就会结束这个switch-case.
+    //  break是可以省略的，如果省略了break，就会往下一个case项穿透，直到遇到break或者这个switch-case结束为止。
+    //c.default是可以省略的，不会有语法错误。  
+	//如果switch后面的表达式有可能出现的值都在case项里面被罗列出来了，
+	//那么就永远不可能执行default,此时就可以省略default。(反正我不建议省略)
+  </script>
+</body>
+</html>

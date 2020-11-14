@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="js/jquery-1.10.2.js"></script>
+		<style>
+			#btn{
+				color: red;
+				/* background:black; */
+			}
+			.on{
+				background-color:white;
+			}
+			.off{
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<button id="btn" class="on">开关</button>
+		<script>
+			$(function(){
+				$('#btn').click(function(){
+					//hasClass('');//判断有没有类名
+					//思路一
+					// if($(this).hasClass('on')){
+					// 	$(this).removeClass('on').addClass('off');
+					// }
+					// else if($(this).hasClass('off')){
+					// 	$(this).removeClass('off').addClass('on');
+					// }
+					//思路二
+					// if($(this).hasClass('off')){
+					// 	$(this).removeClass('off');
+					// }
+					// else{
+					// 	$(this).addClass('off');
+					// }
+					//思路三
+					$(this).toggleClass('off');
+				});
+			})
+		</script>
+	</body>
+</html>

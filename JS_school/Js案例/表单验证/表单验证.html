@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>表单验证</title>
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="form02.js"></script> 
+	<script src="form01.js"></script> 
+	<script src="form03.js"></script> 
+    <link rel="stylesheet" type="text/css" href="form02.css"> 
+    
+</head>
+
+<body>
+    <h1 style="text-align:center;">表单验证</h1>
+    <form id="form" method="post" >
+        <ul>
+			<li>
+				<label><i class="red">*</i>手机号：</label>
+				<input type="text" id="tel" required/>
+				<span class="tips"></span>
+			</li>
+            <li>
+                <label><i class="red">*</i>用户名：</label>
+                <input type="text" id="user" name='user123'  value="" placeholder="用户名" required >
+				<span class="tips"></span>
+            </li>
+            <li>
+                <label><i class="red">*</i>密码：</label>
+                <input type="text" id="pwd" required >
+				<span class="tips"></span>
+            </li>
+            <li>
+                <label><i class="red">*</i>确认密码：</label>
+                <input type="text" id="pwdAgain" required>
+            </li>
+			<li>
+				<label><i class="red">*</i>性别：</label>
+				<select>
+					<option value ="sex">男</option>
+					<option value ="sex">女</option>
+				</select>
+			</li>
+            <li>
+                    <label><i class="red">*</i>紧急联系人：</label>
+                    <input type="text" id="rel" required>
+					<span class="tips"></span>
+            </li>
+			<li>
+				<label>留言：</label>
+				<textarea id="area" rows="s"></textarea>
+			</li>
+            <li>
+                <label><i class="red">*</i> 邮箱地址：</label>
+                <input type="text" id="email" required>
+				<span class="tips"></span>
+            </li>
+            <li>
+                <input type="submit" id="sub" value="提  交">
+            </li>
+        </ul>
+
+    </form> 
+	
+</body>
+
+</html>

@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>jQuery遍历</title>
+    <script src="js/jquery-1.10.2.js"></script>
+
+    <style type="text/css">
+        ul {
+            list-style: none
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            width: 1200px;
+            height: 500px;
+            margin: 50px auto;
+            border: 1px solid #333;
+            overflow: hidden;
+        }
+
+        div li {
+            width: 200px;
+            float: left;
+            margin: 0 10px;
+        }
+
+        div li img {
+            width: 100%;
+        }
+
+        div ul {
+            width: 100%;
+            height: 304px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h3>demo0403：jquery遍历--祖先元素</h3> 
+    <div id="box">
+        <ul>
+            <li class="zz">
+                <a class="aa01" href="#">我是第1张图</a>
+                <img src="images/1.jpg" />
+            </li>
+            <li>
+                <a href="#">我是第2张图</a>
+                <img src="images/2.jpg" />
+            </li>
+            <li>
+                <a href="#">我是第3张图</a>
+                <img src="images/3.jpg" />
+            </li>
+            <li>
+                <a href="#">我是第4张图</a>
+                <img src="images/4.jpg" />
+            </li>
+            <li id="item05">
+                <a href="#">我是第5张图</a>
+                <img src="images/5.jpg" />
+            </li>
+        </ul>
+    </div>
+    <script>
+        $(function () {
+            //1 遍历后代元素
+            //子元素：儿子辈的
+           // $("#list").children(".item").css('border', '2px solid red');
+            //$("#box ul").children().css('border', '5px solid blue');
+            //find() 小括号为空，函数是不会执行，不会选中/遍历到任何后代元素。
+           // $("#box").find().css('border', '2px solid blue');
+           // $("#box").find("a").css('border', '8px solid blue');
+
+            //2 遍历祖先元素
+            //  parent() 父亲元素
+           // $(".aa01").parent().addClass('father');
+
+            // parents() 祖先元素 遍历到根元素 html
+           // $(".aa01").parents().css('backgroundColor', 'blanchedalmond');
+
+            // parentsUntil(selector, filter)遍历祖先元素，直到（但不包括）selector元素
+            $(".aa01").parentsUntil('body',"#box").css('backgroundColor', 'blanchedalmond');
+            // a.aa01所有祖先元素：  >li > ul  > div#box  >  body  > html
+           // 选取 a.aa01的祖先元素直到遇见html,但并不包括html
+
+
+
+        })
+    </script>
+
+
+</body>
+
+</html>

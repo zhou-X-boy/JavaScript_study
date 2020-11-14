@@ -1,0 +1,1 @@
+exports.data="我是目录模块的package.json中的main属性指向的主模块文件"

@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>jQuery类名</title>
+    <script src="js/jquery-1.10.2.js"></script>
+    <style type="text/css">
+        button {
+            color: #ff0000;
+        }
+
+        .on {
+            background-color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="btn">我是个开关</button>
+    <script>//$(function(){ })
+        $(document).ready(function () {
+            $("#btn").click(function () {  
+                //思路2:toggleClass()方法 切换类名   添加/移除的状态 
+                $(this).toggleClass('on');
+            });
+        })
+    </script>
+
+
+</body>
+
+</html>

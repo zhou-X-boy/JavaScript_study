@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="js/jquery-1.10.2.js"></script>
+	</head>
+	<body>
+		<input type="button" id="btn" value="显示效果"/>
+		<div id="box" style="border: 1px solid black;">
+			<p>蓝色</p>
+			<ul>
+				<li>绿色</li>
+				<li><p>蓝色</p></li>
+				<li>绿色</li>
+			</ul>
+			<p>蓝色</p>
+		</div>
+		<p>黄色</p>
+		<p>红色</p>
+		<p>红色</p>
+		<script>
+			$(function(){
+				$("#btn").click(function(){
+					$("#box").css("background-color","#fafafa");
+					//$("#box p").css("color","#39F");
+					$("#box ul li").css("color","green");
+					//层次选择器
+					$("#box~p").css("color","red");//div后面所有直接的兄弟元素p标签元素
+
+					$("#box>p").css("color","blue");//div里面所有的直接p标签
+					$("#box+p").css("color","yellow");//div后面的第一个p标签元素
+				});
+			})
+		</script>
+		
+		<input type="button" value="按钮" id="btn1"/>
+		<div style="border: 1px solid black;">
+		<ul id="yanse">
+			<li class="hs">红色</li>
+			<li id="hs">红色</li>
+		</ul>
+		<p class="ls">蓝色</p>
+		<p class="ls">蓝色</p>
+		<a herf="#" class="green">绿色</a>
+		</div>
+		<script>
+			$(function(){
+				$("#btn1").click(function(){
+				    $("a.green").css("color","green");
+				    $(".ls").css("color","blue");
+				    $("li.hs,#hs").css("color","red");
+				});
+			});
+		</script>
+	</body>
+</html>

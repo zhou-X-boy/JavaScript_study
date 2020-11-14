@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JavaScript与jquery比较</title>
+<link href="" rel="stylesheet" type="text/css" />
+<script src="js/jquery-1.6.min.js"></script>
+<style type="text/css">
+ 
+</style>
+
+</head>
+
+<body>
+<h3>demo0102：页面的加载事件</h3>
+<div id="dv">看console控制台
+ </div>
+ 
+
+<script type="text/javascript">
+/*javascript写法*/
+  //页面的加载事件
+       window.onload=function () {
+           console.log("王老吉, 1");
+       };
+       window.onload=function () {
+           console.log("加多宝, 2");
+      };
+
+</script> 
+
+<script src="js/jquery-1.10.2.js"></script>
+<script type="text/javascript">
+/*jquery写法：*/
+//2 使用Jquery中的window对象
+/*$(window).load(function () {
+	 console.log("我在客厅, 1");
+ });
+$(window).load(function () {
+    console.log("我在厨房, 2");
+});*/
+
+
+//3 使用Jquery中的document对象
+/* $(document).ready(function () {
+    console.log("喝咖啡");
+ });
+$(document).ready(function () {
+    console.log("喝橙汁");
+ });*/
+
+
+//4 使用Jquery中的document对象 换一种写法
+/*jQuery(function () {
+   console.log("天气晴朗，1");
+ });
+jQuery(function () {
+   console.log("太阳很大，2");
+ });*/
+
+
+
+//5 使用Jquery中的document对象 终极写法
+/*$(function () {
+   console.log("乌云密布，1");
+ });
+$(function () {
+   console.log("要下大雨，2");
+ });*/
+
+
+
+
+</script>
+</body>
+</html>
+
+
+
+

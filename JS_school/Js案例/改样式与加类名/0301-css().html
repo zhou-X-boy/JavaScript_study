@@ -1,0 +1,137 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>jQuery修改样式</title>
+    <script src="js/jquery-1.10.2.js"></script>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        button {
+            display: inline-block;
+            font-size: 20px;
+            width: 180px;
+            height: 40px;
+            line-height: 40px;
+            margin: 0 10px;
+            text-align: center
+        }
+
+        ul {
+            width: 1210px;
+            margin: 0 auto;
+            padding: 20px 10px;
+            border: 2px solid red;
+        }
+
+        ul:after {
+            /*在浮动元素的父级元素里设置清除浮动*/
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        li {
+            width: 200px;
+            height: 300px;
+            overflow: hidden;
+            float: left;
+            padding: 10px;
+            margin: 0 10px;
+        }
+
+        li img {
+            display: block;
+            height: 100%;
+            margin: 0 auto;
+        }
+
+        .bg01 {
+            background-color: yellow;
+        }
+
+        .bg02 {
+            background-color: pink;
+            font-size: 30px;
+            color: blue;
+        }
+
+        .bg03 {
+            background-color: aquamarine;
+        }
+
+        .font50 {
+            font-size: 50px;
+        }
+
+        .bd6 {
+            border: 6px solid #aa00aa;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>demo301：jQuery修改样式</h3>
+    <p style="margin:0 auto; width:90%; text-align:center; padding-bottom:30px;">
+        <button onclick="bgChange01();">看我改了啥</button>
+        <button onclick="bgChange02();">看我改了啥</button>
+        <button onclick="bgChange03();">看我改了啥</button>
+    </p>
+    <ul id="list">
+        <li>被光抓走的人
+            <img src="images/1.jpg">
+        </li>
+        <li>少年的你
+            <img src="images/2.jpg">
+        </li>
+        <li>流浪地球
+            <img src="images/3.jpg">
+        </li>
+        <li>战狼Ⅱ
+            <img src="images/4.jpg">
+        </li>
+        <li>人在囧途
+            <img src="images/5.jpg">
+        </li>
+    </ul>
+    <script>  
+
+        //修改样式1  单个样式
+        function bgChange01() {
+            // $("#list>li").css("backgroundColor","yellow");
+            $("#list>li").removeClass('bg03 font50  bd6').removeClass('bg02');  //移除类名
+            $("#list>li").addClass("bg01 "); //添加类名
+        }
+
+        //修改样式2：多个样式 
+        function bgChange03() {
+            $("#list>li").addClass('bg03 font50  bd6');
+            $("#list>li").removeClass('bg01 bg02');
+            // $("#list>li").addClass('bg03').addClass('font50').addClass("bd6");
+            // $("#list>li").css({
+            //     "backgroundColor":"aquamarine",
+            //   "fontSize":"20px",
+            //   "border":"4px solid blue" 
+            // })
+        }
+
+        //修改样式3 ：链式编程 
+        function bgChange02() {
+            // $('#list>li').css('backgroundColor','pink').css().css().css();
+            //$("#list>li").css("backgroundColor","pink").
+            // css("fontSize","30px").css("color","blue");
+            $("#list>li").removeClass('bg01  bg03 ').removeClass(" font50  bd6");
+            $("#list>li").addClass("bg02");
+           
+        }
+
+    </script>
+
+
+</body>
+
+</html>

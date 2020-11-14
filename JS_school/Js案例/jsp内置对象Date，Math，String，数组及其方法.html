@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+<script>
+//获取日期
+var today=new Date();
+console.log(today);
+var yy=today.getFullYear();
+var mm=today.getMonth()+1;//getMonth获取的是0-11
+var dd=today.getDate();
+var xingqi=today.getDay();//getday获取的是0-6
+console.log(yy,mm,dd,xingqi);
+//设置日期
+var today=new Date();
+console.log(today);
+today.setDate();
+
+//使用Math对象方法
+var age=22.5;
+console.log(Math.floor(age));//向下舍入
+console.log(Math.ceil(2.5));//向上舍入
+console.log(Math.round(2.6));//四舍五入
+console.log(Math.round(2.3));
+console.log(Math.random()*10);//返回0~10之间的随机数
+console.log(Math.max(1,2));//返回最大值
+console.log(Math.min(1,2));//返回最小值
+console.log(Math.abs(-2));//返回绝对值
+console.log(Math.sqrt(16));//返回16的平方根
+console.log(Math.pow(3,2));//返回3的2次幂
+
+//数组
+var arr=[1,2,3];
+console.log(arr.length);
+console.log(arr.push(4,5,6));//向数组末尾添加元素
+console.log(arr.pop());//删除数组最后一个元素
+console.log(arr.unshift(0));//向数组开头添加一个/多个元素
+console.log(arr.shift(1));//向数组开头删除一个/多个元素
+var arr2=['a','b','c'];
+console.log(arr2.concat(arr));//拼接数组
+console.log(arr2.join("*"));//数组用分隔符转换成字符串，不会改变原来数组
+console.log(arr2.slice(0,2));//选取数组下标0~2之间的元素
+console.log(arr2.splice(1,0,'1','2'));
+console.log(arr.sort(sortNumber));
+function sortNumber(a,b){//比较数组里面元素的大小，然后进行排序
+	return a-b;
+}
+//String字符串方法
+var text="Hello World"
+var text2="JavaScript"
+console.log(text.concat("",text));//拼接字符串
+console.log(text.length);//字符串长度
+console.log(text.toLowerCase());//转换成小写
+console.log(text.toUpperCase());//转换成大写
+console.log(text.indexOf("o"));//返回字符串首次出现的索引位置
+console.log(text.lastIndexOf("o"));//返回字符串最后一次出现的索引位置
+console.log(text.slice(2,9));//提取字符串位置2到位置9的片段
+console.log(text.slice(-3,-1));//如果某个参数为负，则从字符串的结尾开始计数
+console.log(text.substring(2,9));//提取字符串位置2到位置9的片段
+console.log(text.substr(2,3));//提取字符串位置2开始长度3的片段
+</script>
+
+<body>
+</body>
+</html>

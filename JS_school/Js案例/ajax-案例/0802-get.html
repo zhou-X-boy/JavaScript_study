@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>AJAX-get</title>
+    <!-- <script src="js/jquery-1.10.2.js"></script> -->
+</head>
+
+<body>
+    <div id="show"></div>
+    <form>
+        <p>admin:<input type="text" id="username" /></p>
+        <p>password:<input type="password" id="password" /></p>
+        <input type="button" id="btn" value="提交">
+    </form>
+    <script>
+        function $(id) {
+            return document.getElementById(id);
+        }
+        var btn = $("btn");
+        btn.onclick = function() {
+            var username = $("username").value;
+            var password = $("password").value;
+            //发起异步请get请求
+            //步骤1：创建xhr对象
+            var xhr = null; //创建一个XML对象
+            if (window.XMLHttpRequest) {
+                xhr = new XMLHttpRequest(); //标准浏览器
+            } else {
+                xhr = new ActiveXObject("Microsoft.XMLHTTP"); //IE
+            }
+            var url = "0802-get.php?username=" + username + "&password=" + password;
+            //?后面是变量，&连接变量
+            //?后面是变量，&连接变量
+            //步骤3：打开到服务器的连接：xhr.open(method,  uri,  isAsyn);  
+            xhr.open("get", url, true); //准备发送请求-配置发送请求的一些行为
+            //true代表异步，false代表同步  
+            //步骤2：监听XHR的状态改变，待响应接收完成后，读取响应主体
+            xhr.onreadystatechange = function() {
+                    /*每当readyState变化时，都会触发这个事件由浏览器做
+                    返回0:XMLHttpRequest创建完成
+                    返回1:准备好发送的请求了，但是还没有发送
+                    返回2:发送请求完成了
+                    返回3:服务器返回数据
+                    返回4：返回的数据可以用了
+                    */
+                    if (xhr.readyState == 4) { //readyState 等于 4 且status为 200 时，表示响应已就绪
+
+                        if (xhr.status == 200) {
+                            var data = xhr.responseText; //获得字符串形式的响应信息 JSON
+                            if (data == 1) {
+                                $("show").innerHTML = "登陆成功!";
+                            } else if (data == 2) {
+                                $("show").innerHTML = "账号或密码错误";
+                            }
+                        }
+                    }
+                }
+                //步骤4：发送请求消息 send(body/null )：发送请求消息 
+            xhr.send(null);
+        }
+    </script>
+</body>
+
+</html>

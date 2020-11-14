@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>AJAX</title>
+</head>
+
+<body>
+    <h1>使用XHR发起异步的post请求：</h1>
+    <form method="post" action="0802-post.php" name="userinfo">
+        姓名:<input type="text" name="username" /> 学校:
+        <input type="text" name="school" /> 个人简介:
+        <textarea name="selfinfo"></textarea>
+        <a href="javascript:;" onclick="ajaxpost()">提交</a>
+    </form>
+    <script type="text/javascript">
+        function ajaxpost() {
+            var f = document.userinfo;
+            var uname = f.username.value;
+            var uschool = f.school.value;
+            var uinfo = f.selfinfo.value;
+
+            //步骤1，创建xhr对象
+            var xhr;
+            if (window.XMLHttpRequest) {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+                xhr = new XMLHttpRequest();
+            } else {
+                // code for IE6, IE5
+                xhr = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+
+            //步骤2，监听
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    // console.log(xhr.responseText);
+                    //使用eval() 进行解析json数据格式，
+                    //其中"(" + result+ ")"的两个括号是一定要写的，
+                    //意思是将其中的relult转换成表达式。
+                    var obj = eval('(' + xhr.responseText + ')');
+                    //var x=10   document.write(eval(x+17))
+                    console.log(obj);
+                    alert('姓名:' + obj.uname + '学校:' + obj.uschool + '个人简介:' + obj.uinfo);
+                }
+            }
+
+            //步骤3：打开到服务器的连接
+            xhr.open("post", "0802-post.php", true);
+            //步骤3.5，设置头信息,post传递参数加上这么个头部即可
+            xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            /*  
+            //步骤3.5 post 修改请求头部 , 发送post请求时此句万万不能少
+            // 在Form元素的语法中，EncType表明提交数据的格式, 
+            //用 Enctype 属性指定将数据回发到服务器时浏览器使用的编码类型。
+            //请求主体的编码类型，是经过编码后的表单数据，默认
+            // xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            // text/plain：普通文本，未经编码
+            // xhr.setRequestHeader('Content-Type', 'text/plain');
+            //multpart/form-data指表单数据有多部分构成，既有文本数据，又有文件等二进制数据
+            //指定传输数据为二进制类型，比如图片、mp3、文件。 
+            */
+
+            //步骤4，发送请求
+            xhr.send('uname=' + uname + '&uschool=' + uschool + '&uinfo=' + uinfo); //消息主体
+        }
+    </script>
+</body>
+
+</html>

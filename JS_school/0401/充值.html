@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta charset="UTF-8">
+    <title>选项卡</title>
+    <meta name="viewport" content="width=device-width, 
+    initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,
+    user-scalable=no">
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            border: none;
+            outline: none;
+        }
+        .m0{ 
+			margin: 0 auto;
+		}
+
+        body {
+            background-color: #f0f0f0;
+        }
+
+        .btns {
+            width: 90%;
+            background-color: #fff;
+            padding: 0 5%;
+            border-bottom: 1px solid #eee;
+			overflow: hidden;
+        }
+
+        .btns::after {
+            content: '';
+            display: table;
+            clear: both;
+        }
+
+        .btns button {
+            width: 33.33%;
+            height: 50px;
+            line-height: 50px;
+            float: left;
+            font-size: 18px;
+            text-align: center;
+            background: none;
+        }
+
+        .btn-a {
+            border-bottom: 4px solid  #11c571;
+        }
+        .cont{
+        	width: 300%;
+        	display: block;
+        	position:relative;
+        	top: 0;
+        	left: 0;
+        	font-size: 18px;
+        	height: 700px;
+        	overflow: hidden;
+        }
+        .Cont {
+            float: left;
+            width: 33.33%;
+            height: 100%;
+            padding: 30px 0;
+            text-align: center;
+            font-size: 50px;
+            background: #f0f0f0;
+			overflow: hidden;
+		}
+        .cont01 {
+            display: block;
+        }
+		.Cont .xz{ 
+			width: 90%; 
+			margin:0 auto;
+			padding:20px 0 8px 0;
+		    font-size: 15px; 
+		}
+		.Cont ul {
+		    width: 90%; 
+		    margin : 0px auto 20px auto;
+			overflow: hidden;
+		}
+        .Cont input.num {
+            display: block;
+            width: 25%;
+            margin: 0 auto;
+            height: 50px;
+            line-height: 50px;
+            font-size: 12px;
+            text-indent: 10px;
+        
+            background-color: #fafafa;
+            border-radius: 5px;
+        }
+		.Cont ul:after{ 
+			content: ''; 
+			display: table; 
+			clear: both;}
+		.Cont ul li {
+		    display: block;
+		    float: left;
+		    margin: 8px 2%;
+		    width: 29.3%;
+		    height: 5em;
+		    line-height: 5em; 
+		    font-size: 18px;
+		    text-align: center;
+		    background: #fff;
+		    border-radius: 6px;
+		}
+		.zdy{
+			margin: 8px 2%;
+			width: 29.3%;
+			height: 5em;
+			line-height: 5em;
+			font-size: 18px;
+			text-align: center;
+			background: #fff;
+			border-radius: 6px;
+		}
+		.Cont ul li.cur{
+		    color: black;
+		    background-color: #11c571;
+		}
+		.Cont ul li:hover{
+			 color: black;
+			 background-color: #11c571;
+		 }
+		.Cont a.go{ 
+		    display: block;
+		    width: 86%; 
+			height: 50px;
+		    line-height: 50px;
+		    font-size: 18px;
+		    text-align: center;
+		    color: #11c571;
+		    border-radius: 6px;
+		    border:1px solid  #11c571;
+		}
+		.but{
+			background-color: transparent;
+			font-size: 20px;
+			
+		}
+    </style>
+</head>
+
+<body>
+    <!-- 导航 -->
+    <div class="btns m0">
+        <button class="btn-a">充话费</button>
+        <button>充流量</button>
+        <button>充宽带</button>
+    </div>
+    <div class="cont m0">
+	    <!--充话费 -->
+		<div class="Cont cont01 m0">
+			<input  class="num m0" type="text" placeholder="请输入手机号码" />
+			<p class="xz">请选择话费</p>
+			<ul class="m0" id="list01"> 
+			    <li class="cur">10元</li>
+				<li>20元</li>
+				<li>50元</li>
+			    <li>100元</li>
+				<li>100元</li>
+				<input type="text" value="自定义"  class="zdy"/>
+			</ul>
+			<a class="go m0"><button onclick="cz()" class="but">确认充值</button></a>
+		</div>
+
+		<!--充流量 -->
+		<div class="Cont cont02 m0">
+			 <input class="num m0" type="text" placeholder="请输入手机号码" />
+			     <p class="xz">请选择流量</p>
+			 <ul class="m0" id="list02"> 
+			         <li class="cur">100M</li>
+					 <li>500M</li>
+					 <li>1G</li>
+			         <li>10G</li>
+				     <li>20G</li>
+					 <li>50G</li>
+			 </ul>
+			 <a class="go m0"><button  onclick="cz()" class="but">确认充值</button></a>
+		</div>
+		<!--充宽带 -->
+		<div class="Cont cont03 m0">
+			 <input class="num m0" type="text" placeholder="请输入手机号码" />
+			     <p class="xz">请选择宽带</p>
+			 <ul class="m0" id="list03"> 
+			         <li class="cur">512KB</li>
+					 <li>50M</li>
+					 <li>100M</li>
+			         <li>500M</li>
+					 <li>1G</li>
+					 <li>10G</li>
+			 </ul>
+			 <a class="go m0"><button onclick="cz()" class="but">确认充值</button><a>
+		</div>
+	</div>
+    <script>
+        $(function () {
+			$(".btns button").click(function () {
+                //当前点击的button设置下边框
+                $(this).addClass('btn-a').siblings("button").removeClass("btn-a");
+				var index=$(this).index();
+				var leftValue=(-1)*index*100+"%";
+				console.log(leftValue);
+				$(".cont").stop(true,true).animate({left:leftValue},2000)
+            })
+			$(".Cont #list01 li").click(function(){
+				var index1=$(this).index();
+				$('#list01').find("li").eq(index1).css("backgroundColor"," #11c571");
+				$("#list01").children("li").eq(index1).siblings().css("backgroundColor","white");
+			})
+			$(".Cont #list02 li").click(function(){
+				var index1=$(this).index();
+				$('#list02').find("li").eq(index1).css("backgroundColor"," #11c571");
+				$("#list02").children("li").eq(index1).siblings().css("backgroundColor","white");
+			})
+			$(".Cont #list03 li").click(function(){
+				var index1=$(this).index();
+				$('#list03').find("li").eq(index1).css("backgroundColor"," #11c571");
+				$("#list03").children("li").eq(index1).siblings().css("backgroundColor","white");
+			})
+			
+		})
+		function cz(){
+			alert("充值失败！")
+			
+		}
+    </script>
+</body>
+
+</html>

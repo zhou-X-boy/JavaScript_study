@@ -1,0 +1,1 @@
+exports.data='后缀名为js的文件'

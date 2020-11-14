@@ -1,0 +1,628 @@
+
+.down-mian{
+	position: relative;
+	width: 1080px;
+	height: 1280px;
+	/* border: 1px solid green; */
+	top: 980px;
+	left: 235px;
+}
+
+.item_header{
+	position: relative;
+	height: 30px;
+	/* border: 1px solid blue; */
+}
+.item_title {
+    font-size: 22px;
+    line-height: 25px;
+    text-indent: 33px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.more-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-left: 22px;
+    color: #999;
+}
+.more-btn:hover{
+	color:  #e4b653;
+}
+/* 内容中心部分 */
+.down-left-top{
+	position: absolute;
+	width: 750px;
+	height: 500px;
+	/* border: 1px solid red; */
+}
+#down-left-top-header{
+	position: absolute;
+	top: 40px;
+}
+#down-left-top-header li{
+	position: relative;
+	float: left;
+}
+
+.container{
+	position: absolute;
+	top: 70px;
+	width: 750px;
+	height: 430px;
+	/* border: 1px solid black; */
+}
+.left-header{
+	position: absolute;
+	width: 249px;
+	height: 30px;
+	/* border:1px solid green; */
+	text-align: center;
+	background-color: #f5f5f5;
+	border-left: 1px solid #858792;
+}
+.left-header:hover{
+	text-decoration: none;
+	border-bottom: 3px solid #e4b653;
+}
+.left-header a{
+	position: absolute;
+	font-size: 14px;
+	top: 5px;
+	left: 100px;
+}
+.box1{
+	position: absolute;
+	width: 750px;
+	height: 430px;
+	/* border: 1px solid black; */
+}
+#box1-header{
+	position: absolute;
+	top: 10px;
+}
+#box2-header{
+	position: absolute;
+	top: 10px;
+}
+#box1-header li{
+	border-radius: 10px;
+	float: left;
+	text-align: center;
+	background-color: #f5f5f5;
+}
+#box2-header li{
+	border-radius: 10px;
+	float: left;
+	text-align: center;
+	background-color: #f5f5f5;
+}
+#box1-header li a{
+	font-size: 14px;
+	text-align: center;
+}
+#box2-header li a{
+	font-size: 14px;
+	text-align: center;
+}
+#box1-header li:hover{
+	border-color: #f3c258;
+	background: #f3c258;
+	color: #fff;
+}
+#box2-header li:hover{
+	border-color: #f3c258;
+	background: #f3c258;
+	color: #fff;
+}
+.box-header2{
+	width: 40px;
+	height: 20px;
+	/* border: 1px solid black; */
+}
+.box-header4{
+	width: 80px;
+	height: 20px;
+	/* border: 1px solid black; */
+}
+.box-header5{
+	width: 90px;
+	height: 20px;
+	/* border: 1px solid black; */
+}
+.box-header6{
+	width: 120px;
+	height: 20px;
+	/* border: 1px solid black; */
+}
+.box-header7{
+	width: 115px;
+	height: 20px;
+	/* border: 1px solid black; */
+}
+.container1{
+	position: absolute;
+	width: 750px;
+	height: 395px;
+	/* border:1px solid black; */
+	top: 35px;
+}
+.box1-nav ul li{
+	position: relative;
+	float: left;
+	margin-left: 12px;
+}
+.nrzx-ul{
+	position: absolute;
+	top: 15px;
+}
+.nrzx-img-1{
+	position: absolute;
+	left: -12px;
+}
+.nrzx-img-2{
+	position: absolute;
+	left: -17px;
+}
+.nrzx-img-3{
+	position: absolute;
+	left: -17px;
+}
+.nrzx-img-4{
+	position: absolute;
+	top: -124px;
+	left: 560px;
+}
+.nrzx-img-5{
+	position: absolute;
+	left: -204px;
+	top: 70px;
+}
+.nrzx-img-6{
+	position: absolute;
+	left: -209px;
+	top: 70px;
+}
+.nrzx-img-7{
+	position: absolute;
+	left: 365px;
+	top: -53px;
+}
+.nrzx-img-8{
+	position: absolute;
+	left: 365px;
+	top: -53px;
+}
+
+
+.bf{
+	position: absolute;
+	width:175px;
+	color: #fff;
+	background: rgba(0,0,0,0.6);
+	left: 0px;
+	top: 80px;
+}
+.fr{
+	float: right;
+}
+.nrzx-wz{
+	width: 180px;
+	height: 20px;
+	font-size: 12px;
+}
+/*英雄皮肤部分*/
+.down-right-top{
+	position: absolute;
+	width: 300px;
+	height:500px ;
+	right: 1px;
+	/* border: 1px solid blue; */
+}
+#down-right-top-header{
+	position: relative;
+	top: 10px;
+	background-color: #f5f5f5;
+}
+#down-right-top-header li{
+	position: relative;
+	float: left;
+	height: 30px;
+	width: 99px;
+	text-align: center;
+	background-color: #f5f5f5;
+}
+.right-header{
+	border-left: 1px solid #858792;
+}
+.a1{
+	border-left: none;
+}
+.right-header:hover{
+	text-decoration: none;
+	border-bottom: 3px solid #e4b653;
+}
+.right-header a{
+	position: absolute;
+	font-size: 14px;
+	top: 5px;
+	left: 20px;
+}
+.container2{
+	position: absolute;
+	width: 300px;
+	height: 395px;
+	/* border:1px solid black; */
+	top: 80px;
+}
+.new_hero_bottom{
+	padding: 10px 15px;
+	height: 47px;
+	border: 1px solid #e5e5e5;
+	border-top: none;
+	border-radius: 0 0 2px 2px;
+}
+.new_hero_bottom p{
+	text-align: left;
+}
+.new_hero_name{
+	font-size: 18px;
+	color: #333333;
+	font-weight: bold;
+}
+.yx-img li{
+	margin-left: 6px;
+	float: left;
+}
+.yx-name1{
+   position: absolute;
+   width: 68px;
+   height: 173px;
+   color: rgba(0,0,0,0.1);
+   background-color: rgba(0,0,0,0.1);
+   left: 7px;
+}
+.yx-name1 p{
+	position: absolute;
+	top: 60px;
+	left: 25px;
+}
+.yx-name2{
+   position: absolute;
+   width: 68px;
+   height: 173px;
+   background-color: rgba(0,0,0,0.1);
+   left: 80px;
+   color:  rgba(0,0,0,0.1);
+}
+.yx-name2 p{
+	position: absolute;
+	top: 50px;
+	left: 25px;
+}
+.yx-name3{
+   position: absolute;
+    width: 68px;	height: 173px;	background-color: rgba(0,0,0,0.1);	left: 155px;	color: rgba(0,0,0,0.1);
+}
+.yx-name3 p{
+	position: absolute;
+	top: 60px;
+	left: 25px;
+}
+.yx-name4{
+   position: absolute;
+   width: 68px;
+   height: 173px;
+   background-color: rgba(0,0,0,0.1);
+   left: 227px;
+   color: rgba(0,0,0,0.1);
+}
+.yx-name4 p{
+	position: absolute;
+	top: 60px;
+	left: 25px;
+}
+.yx:hover{
+	background-color: rgba(0,0,0,0.9);
+	color: #e4b653;
+	 transition:background 1ms ease-in 1ms,color 1ms ease-in 1ms;
+}
+
+.pf-img li{
+	margin-left: 6px;
+	float: left;
+	
+}
+.pf-name{
+	position:absolute;
+	width: 2px;
+	font-size: 14px;
+	margin-top: -25px;
+	
+}
+.pf:hover{
+	background-color: rgba(0,0,0,0.9);
+	color: #e4b653;
+	transition:background 1ms ease-in 1ms,color 1ms ease-in 1ms;
+}
+/*赛事中心部分*/
+.down-left-down{
+	position: absolute;
+	width: 750px;
+	height: 810px;
+	top: 580px;
+	border: 1px solid yellow;
+}
+#down-left-down-header{
+	position: absolute;
+	top: 35px;
+}
+#down-left-down-header li{
+	position: relative;
+	float: left;
+	width: 92.5px;
+	height: 24px;
+	/* border: 1px solid blue; */
+	font-size: 13px;
+	text-align: center;
+	border-left: 1px solid #999;
+	background-color: #f5f5f5;
+}
+.left-header-down {
+	color: #999;
+	padding-top: 6px;
+}
+.left-header-down:hover{
+	color: black;
+	border-bottom: 3px solid #e4b653;
+}
+.container3{
+	position: absolute;
+	width: 750px;
+	height: 700px;
+	/* border:1px solid black; */
+	top: 95px;
+}
+.ss-news{
+	position: absolute;
+	width: 750px;
+	height:300px;
+	/* border: 1px solid black; */
+}
+.ss-video{
+	position: absolute;
+	width: 750px;
+	height: 350px;
+	border: 1px solid blue;
+	top: 300px;
+}
+.ss-news-img{
+	position: absolute;
+	width: 211px;
+	height: 260px;
+	/* border: 1px solid green; */
+}
+.ss-news-ul{
+	position: absolute;
+	width: 539px;
+	height: 260px;
+	/* border: 1px solid blue; */
+	left: 211px;
+}
+.news-list{
+	position: absolute;
+	
+	width: 539px;
+}
+.news-list li{
+	width: 539px;
+}
+.line-sp{
+	background: none;
+	width: 477px;
+	margin: 0;
+	padding: 0;
+	height: 66px;
+	line-height: 32px;
+}
+.news-type{
+	position: absolute;
+	height: 19px;
+	width: 50px;
+	border-radius: 10px;
+	background-color: #e3e3e3;
+	font-size: 12px;
+	text-align: center;
+	color: #999999;
+	border: 2px solid #e3e3e3;
+	
+}
+.typ1{
+	position: absolute;
+	top: 75px;
+	left: 15px;
+}
+.typ2{
+	position: absolute;
+	top: 105px;
+	left: 15px;
+}
+.typ3{
+	position: absolute;
+	top: 135px;
+	left: 15px;
+}
+.typ4{
+	position: absolute;
+	top: 165px;
+	left: 15px;
+}
+.typ5{
+	position: absolute;
+	top: 195px;
+	left: 15px;
+}
+.typ6{
+	position: absolute;
+	top: 225px;
+	left: 15px;
+}
+.news-txt{
+	position: absolute;
+	width:500px;
+	display:block;
+	overflow:hidden;
+	word-break:keep-all;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	font-size: 24px;
+	top: 5px;
+	color: black;
+	text-decoration: none;
+}
+.news-txt:hover{
+	text-decoration: underline;
+}
+.news-txt1{
+	position: absolute;
+	width: 500px;
+	font-size: 14px;
+	display:block;
+	overflow:hidden;
+	word-break:keep-all;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	color: #666666;
+	top: 35px;
+	left:5px;
+	
+}
+.news-txt2{
+	position: absolute;
+	width: 400px;
+	display:block;
+	overflow:hidden;
+	word-break:keep-all;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	color: #666666;
+	text-decoration: none;
+}
+.news-txt2:hover{
+	text-decoration: underline;
+}
+.lft{
+	position: absolute;
+	left: 75px;
+}
+.lft-t{
+	position: absolute;
+	left: 500px;
+}
+.news-time{
+	font-size: 12px;
+	color: #b8b9c5;
+}
+/*KPL赛程部分*/
+.down-right-down{
+	position: absolute;
+	width: 300px;
+	height: 810px;
+	top: 580px;
+	right: 1px;
+	/* border: 1px solid black; */
+}
+.down-right-down-header{
+	position: absolute;
+	margin-top: 6px;
+}
+.down-right-down-mian ul li{
+	position: relative;
+	float: left;
+	width: 99px;
+	height: 24px;
+	/* border: 1px solid blue; */
+	font-size: 13px;
+	text-align: center;
+	border-left: 1px solid #999;
+	background-color: #f5f5f5;
+	padding-top: 8px;
+}
+.down-right-down-item1{
+	position: absolute;
+	width: 300px;
+	height: 60px;
+	border-bottom: 1px #999 solid;
+	top: 80px;
+}
+.down-right-down-item2{
+	position: absolute;
+	width: 300px;
+	height: 60px;
+	border-bottom: 1px #999 solid;
+	top: 150px;
+}
+.down-right-down-img{
+	position: absolute;
+	top: 230px;
+	left: 4px;
+}
+.match-time{
+	position: absolute;
+	width: 80px;
+	color: #333333;
+	font-size: 12px;
+	top: 14px;
+	text-align: center;
+	vertical-align: top;
+}
+.team-name{
+	width: 79px;
+	height: 67px;
+	color: #333333;
+	font-size: 14px;
+	text-align: center;
+}
+.team-name-icon{
+	overflow: hidden;
+	display: block;
+	width: 25px;
+	height: 25px;
+	margin: 10px auto 0 auto;
+	border-radius: 50%;
+	margin-top: -3px;
+}
+.team-name-name{
+	margin-left: 125px;
+	font-size: 12px;
+	
+}
+.team-name1{
+	position: absolute;
+	left: 85px;
+	top: 0px;
+}
+.team-name-name1{
+	margin-left: 138px;
+	font-size: 12px;
+}
+.c1{
+margin-left: 134px;
+}
+.c2{
+	margin-left: 126px;
+}
+.vs{
+	font-size: 14px;
+	width: 43px;
+	color: #f3c258;
+	text-align: center;
+	vertical-align: top;
+}
+.vs1{
+	margin-left: 10px;
+}
+.vs2{
+	margin-left: 20px;
+}

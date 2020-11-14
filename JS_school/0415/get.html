@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<title></title>
+
+	</head>
+	<body>
+        <button id="btn">get请求数据</button>
+		<div id="box">
+			
+		</div>
+		<script type="text/javascript">
+		btn.onclick = function() {
+			var xhr;
+			if (window.XMLHttpRequest){
+				xhr=new XMLHttpRequest();
+			  }
+			else{
+				xhr=new ActiveXObject("Microsoft.XMLHTTP");
+			 }
+			 xhr.onreadystatechange=function(){
+				 if (xhr.readyState==4 && xhr.status==200){
+					  document.getElementById("box").innerHTML=xhr.responseText;
+				}
+			console.log('\nxhr状态改变：' + xhr.readyState);
+			console.log('响应状态码：' + xhr.status); 
+			console.log('响应主体：' + xhr.responseText); //获得字符串形式的响应信息
+			  }
+			xhr.open("GET","a.txt",true);
+			xhr.send(null);
+		}
+		</script>
+	</body>
+</html>

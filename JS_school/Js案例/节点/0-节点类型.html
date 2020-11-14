@@ -1,0 +1,133 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>HTML DOM</title>
+<style>
+ #div2{ font-size:30px;}
+</style>
+</head>
+<body>
+
+<h3 id="box1" class="box" >获取节点类型nodeType：</h3> 
+<script>
+//节点类型：1元素节点，2属性节点，3文本节点，8注释节点，9document对象
+ var box1=document.getElementById('box1');//获取元素节点
+ document.write('元素节点：'+ box1.nodeType +'<br>'); 
+
+ var attr=box1.getAttributeNode("class");//getAttributeNode获取元素节点的属性节点
+document.write('属性节点：'+attr.nodeType+'<br>');
+
+ var sonText=box1.childNodes[0];//childNodes 获取元素节点的文本节点（也是它的子节点）
+ document.write('内容节点：'+sonText.nodeType+'<br>');
+ 
+
+ //输出所有子节点
+ //console.log( box1.childNodes+'<br>');
+</script>
+
+
+
+
+
+<br><br>
+<h3>创建节点</h3> 
+<div  id="box2">
+<p>原来的P元素</p>
+</div>
+<script>
+//创建元素节点，属性节点，文本节点
+var para=document.createElement('p');	//创建元素节点
+
+var attr=document.createAttribute("class"); //创建属性节点方式1
+     attr.value="bbox";
+	 para.setAttributeNode(attr);
+	 para.setAttribute("href","www");      //创建属性节点方式2
+var txt=document.createTextNode('我是新来的文本');
+para.appendChild(txt);
+document.getElementById("box2").appendChild(para);
+
+var comment=document.createComment("我是注释");   //创建注释节点
+document.getElementById("box2").appendChild(comment);
+</script>
+
+
+
+<br><br> 
+<h3>获取节点</h3>
+<div id="box3">这是个盒子，结果都在console控制台<b>bbb</b></div>
+<script> 
+//获取元素节点，属性节点，文本节点
+var box3=document.getElementById("box3");  //获取元素节点
+
+var attrNode=box3.getAttributeNode("id"); //以Attr节点的形式返回指定属性的值
+var attr=box3.getAttribute("id");       //以字符串形式返回指定属性的值
+
+//var txt=box3.firstChild;
+var txt=box3.firstChild.nodeValue;    //获取文本节点的内容
+
+console.log(box3);
+console.log(attrNode);
+console.log(attr);
+console.log(txt);
+</script>
+
+
+
+
+
+
+
+
+
+
+<br><br> 
+<h3>设置节点</h3>
+<div id="box4">依旧是个盒子</div>
+<script> 
+//设置元素节点，属性节点，文本节点
+var box4=document.getElementById("box4");
+
+var a=document.createElement("a"); 
+a.setAttribute("href","javascript:go(-1)");     //2 设置属性的属性值
+
+var attr=document.createAttribute('target');	
+a.setAttributeNode(attr);						//2 设置属性节点，并添加到指定节点中
+
+var txt=document.createTextNode("我是个返回按钮"); //3 创建文本节点，并添加到指定节点
+a.appendChild(txt);
+
+a.innerHTML="我也是内容节点";					//3 设置文本内容
+
+box4.appendChild(a);
+
+</script>
+
+
+
+
+
+<br><br> 
+<h3>移除节点</h3>
+<div id="box5" href="none">怎么还是是个盒子</div>
+<div id="box6">怎么还是是个盒子</div>
+<script> 
+//移除元素节点，属性节点，文本节点
+var box5=document.getElementById("box5");
+//box5.remove();
+box5.removeAttribute("class"); //移除属性
+
+var attr=box5.getAttributeNode("href");
+box5.removeAttributeNode(attr); //移除属性节点
+</script>
+
+
+
+<br><br> 
+<h3>判断has节点</h3>
+<script>
+
+</script>
+
+</body>
+</html>

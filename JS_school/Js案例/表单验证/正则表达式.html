@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="js/jquery-1.10.2.js"></script>
+	</head>
+	<body>
+		<script>
+			var str='1,How are You,2,How OLD are you?_3'
+			//匹配关键字，只能匹配到第一个how
+			console.log("匹配关键字，只能匹配到第一个how:"+str.match('How'));
+			//正则表达式，匹配所有how，忽略大小写
+			console.log("正则表达式，匹配所有how，忽略大小写:"+str.match(/how/ig));
+			//匹配查找到的第一个数字
+			console.log("匹配查找到的第一个数字:"+str.match(/[0-9]/));
+			//全局查找所有数字
+			console.log("全局查找所有数字:"+str.match(/[0-9]/g));
+			//匹配查找到的第一个小写字母
+			console.log("匹配查找到的第一个小写字母:"+str.match(/[a-z]/));
+			//匹配所有小写字母
+			console.log("匹配所有小写字母:"+str.match(/[a-z]/g));
+			//匹配查找到的第一个大写字母
+			console.log("匹配查找到的第一个大写字母:"+str.match(/[A-Z]/));
+			//匹配所有大写字母
+			console.log("匹配所有大写字母:"+str.match(/[A-Z]/g));
+			//返回匹配到的数字
+			console.log("返回匹配到的字符:"+str.match(/\d/g));
+			//i 忽略大小写
+			console.log("i 忽略大小写,查找所有字母:"+str.match(/[A-Z]/gi));
+			//匹配数字字母下划线
+			console.log("匹配数字字母下划线:"+str.match(/[a-zA-Z0-9_]/g));
+			//匹配所有空白字符
+			console.log("匹配所有空白字符:"+str.match(/\s/g));
+			//匹配所有非空字符:
+			console.log("匹配所有非空字符:"+str.match(/\S/g));
+		</script>
+		<script>
+			//验证手机号
+			var tel=/^1[3|4|5|7|9|8][0-9]{9}$/
+			//验证密码
+			var pwd=/^[A-Z0-9]{6,12}$/
+			//验证用户名
+			var user=/^[a-zA-z][a-z0-9]{3,10}$/
+			//验证邮箱
+			var email=/^[a-zA-Z]|[0-9](\w|\-)+@[a-zA-Z]+\.([a-zA-Z]{2,4})$/
+		</script>
+		
+		<form id="form">
+			<input type="text"  id="txt1" value="NO zuo / no dai"/>
+			<input type="text"  id="txt2" value="壹贰叁肆伍拗柒捌镹拾"/>
+			<input type="reset" id="reset" value="重置" />
+			<input type="button" id="btn" value="按钮" />
+		</form>
+		<script>
+			$(function(){
+				var txt1=$("#txt1").val();
+				var txt2=$("#txt2").val();
+				//返回下标位置
+				console.log(txt1.indexOf("no"));//关键词
+				console.log(txt1.search("no"));//关键词
+				// var reg=/no/gi;
+				// console.log(txt1.sertch(reg));//正则表达式
+				
+				//返回关键词内容
+				console.log(txt1.match('no'));//关键词
+				console.log(txt1.match(/no/ig));//正则表达式
+				
+				//返回关键词内容，并且替换
+				console.log(txt1.replace('no','yes'));//关键词
+				var reg=/no/gi;
+				//var reg=/\//gi;//查找特殊字符需在前面加\
+				console.log(txt1.replace(reg,'yes'));//正则表达式
+				//RegExp对象的方法
+				console.log(reg.test(txt1));//返回true和false
+				
+				$(":input").css('background','red');
+				$("#form :reset").css('background','green');
+				
+				
+				var str="Is this all there is?";
+				var reg=new RegExp('is','gi');
+				var patt=new RegExp(/is/,'gi');
+				var patt1=new RegExp('is','gi');
+				console.log(str.match(patt));
+				console.log(str.match(patt1));
+				
+				
+				//动态正则表达式，匹配
+				var str1="我，你，他，她，它";
+				var keys=['我','你','她'];
+				var reg2=new RegExp(keys.join("|"),'g');
+				//var reg1=new RegExp("我|它|她",'g');
+				console.log(str1.match(reg2));
+				
+				var str2="床前明月光，疑是地上霜,举头望明月，低头思故乡"
+				//动态正则表达式，匹配，匹配并替换 明月...
+				var reg3=/明月|举头|故乡/g;
+				console.log(str2.match(reg3));
+				console.log(str2.replace(reg3,'xx'));
+				
+				var keys1=['明月','举头','故乡',];
+				var patt2=new RegExp("明月|举头|故乡",'gi');
+				console.log(str2.match(patt2));
+				console.log(str2.replace(patt2,'xx'));
+			})
+		</script>
+		
+		
+	</body>
+</html>

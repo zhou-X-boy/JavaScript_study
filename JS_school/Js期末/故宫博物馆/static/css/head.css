@@ -1,0 +1,86 @@
+.logo{
+    position: relative;
+    height: 60px;
+    width: 25%;
+    /* border: 1px solid black; */
+    display: block;
+    float: left;
+    /* background-color: black; */
+}
+.logo a img{
+    margin-left: 15%;
+}
+.nav{
+    position: relative;
+    width: 74%;
+    /* border: 1px solid red; */
+    display: block;
+    float: left;
+}
+.nav1{
+    height: 60px;
+    width: 100%;
+    /* border: 1px solid blue; */
+}
+.sy{
+    display: block;
+    float: left;
+    width: 10%;
+    /* border: 1px solid yellow; */
+    text-align:center;
+}
+.sy a,.nav-li a{
+    line-height: 50px;
+    height:60px; 
+    color: #fff;
+    font-size: 15px;
+    text-decoration:none; 
+    display: inline-block; 
+     
+}
+.sy a:hover,.nav-li a:hover,.p ul li a:hover{
+    color: blanchedalmond;
+}
+.nav2{
+    height: 60px;
+    width: 89%;
+    display: block;
+    float: left;
+    /* border: 1px solid red; */
+}
+.clear li{
+    float: left;
+    width: 10%;
+    text-align:center;
+    line-height: 50px;
+}
+.nav-child{
+    position: relative;
+    width: 155%;
+    height: 60px;
+    /* border: 1px solid green; */
+    display: block;
+    float: left;
+    margin-left: -50%;
+    overflow: hidden;
+}
+.child{
+    width: 100%;
+    height: 60px;
+    /* border: 1px solid yellow; */
+    background: rgba(0,0,0,0.1);
+}
+.p{
+    width: 70%;
+    margin-left: 25%;
+}
+.p ul li{
+    float: left;
+    width: 10%;
+    text-align:center;
+    line-height: 50px;
+}
+.p ul li a{
+    color: #fff;
+    font-size: 15px;
+}

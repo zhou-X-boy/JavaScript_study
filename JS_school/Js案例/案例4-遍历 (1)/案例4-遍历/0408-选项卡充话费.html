@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta charset="UTF-8">
+    <title>选项卡</title>
+    <meta name="viewport" content="width=device-width, 
+    initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,
+    user-scalable=no">
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            border: none;
+            outline: none;
+        }
+        .m0{ margin: 0 auto;}
+
+        body {
+            background-color: #f0f0f0;
+        }
+
+        .charge-btns {
+            width: 90%;
+            background-color: #fff;
+            padding: 0 5%;
+            border-bottom: 1px solid #eee;
+        }
+
+        .charge-btns::after {
+            content: '';
+            display: table;
+            clear: both;
+        }
+
+        .charge-btns button {
+            width: 33%;
+            height: 3em;
+            line-height: 3em;
+            float: left;
+            font-size: 18px;
+            text-align: center;
+            background: none;
+        }
+
+        .btn_bd {
+            border-bottom: 2px solid  #11c571;
+        }
+
+        /* 充值正文样式 */
+
+        .chargeCont {
+            width: 100%; 
+            padding-top: 30px;
+            display: none;
+        }
+
+        .chargeCont input.num {
+            display: block;
+            width: 90%;
+            margin: 0 auto;
+            height: 3em;
+            line-height: 3em;
+            font-size: 16px;
+            text-indent: 2em;
+
+            background-color: #fafafa;
+            border-radius: 5px;
+        }
+
+        .cc01 {
+            display: block;
+        }
+        .chargeCont .tips{ width: 90%; margin:0 auto;padding:20px 0 8px 0;
+        font-size: 17px; }
+        .chargeCont ul {
+            width: 92%; 
+            margin : 0px auto 20px auto;
+        }
+        .chargeCont ul:after{ content: ''; display: table; clear: both;}
+        .chargeCont ul li {
+            display: block;
+            float: left;
+            margin: 8px 2%;
+            width: 29.3%;
+            height: 5em;
+            line-height: 5em; 
+            font-size: 18px;
+            text-align: center;
+            background: #fff;
+            border-radius: 6px;
+        }
+        .chargeCont ul li.cur, .chargeCont ul li:hover{
+            color: #fff;
+            background-color: #11c571;
+        }
+        .chargeCont a.go{ 
+            display: block;
+            width: 88%; height: 3em;
+            line-height: 3em;
+            font-size: 18px;
+            text-align: center;
+            color: #11c571;
+            border-radius: 6px;
+            border:1px solid  #11c571;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 导航 -->
+    <div class="charge-btns m0">
+        <button class="btn_bd">充话费</button>
+        <button>充流量</button>
+        <button>充宽带</button>
+    </div>
+
+    <!-- 选项卡正文 -->
+    <!-- 1充话费 -->
+    <div class="chargeCont cc01 m0">
+        <input class="num m0" type="text" placeholder="请输入手机号码" />
+        <p class="tips">请选择话费</p>
+        <ul class="m0"> 
+            <li class="cur">10元</li><li>20元</li><li>50元</li>
+            <li>100元</li><li>100元</li><li>100元</li>
+        </ul>
+        <a class="go m0">确认充值</a>
+    </div>
+
+    <!-- 2充流量 -->
+    <div class="chargeCont cc02 m0">
+            <input class="num m0" type="text" placeholder="请输入手机号码" />
+            <p class="tips">请选择流量</p>
+        <ul class="m0"> 
+                <li class="cur">100M</li><li>500M</li><li>1G</li>
+            <li>10G</li><li>20G</li><li>50G</li>
+        </ul>
+        <a class="go m0">确认充值</a>
+    </div>
+
+    <!-- 3充宽带 -->
+    <div class="chargeCont cc03 m0">
+            <input class="num m0" type="text" placeholder="请输入手机号码" />
+            <p class="tips">请选择宽带</p>
+        <ul class="m0"> 
+                <li class="cur">512KB</li><li>10M</li><li>20M</li>
+            <li>50M</li><li>100M</li><li>200M</li>
+        </ul>
+        <a class="go m0">确认充值</a>
+    </div>
+    <script>
+
+        $(function () {
+            $(".charge-btns button").click(function () {
+                //当前点击的button设置下边框
+                $(this).addClass('btn_bd').siblings("button").removeClass("btn_bd");
+
+                ////获取下标次序
+                var index = $(this).index();
+                //对应下标次序的充话费页面显示，其他充话费页面隐藏
+                $(".chargeCont").hide();
+                $(".chargeCont").eq(index).show();
+            })
+        })
+
+    </script>
+</body>
+
+</html>

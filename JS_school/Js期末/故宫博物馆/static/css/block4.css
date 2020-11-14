@@ -1,0 +1,42 @@
+.block4{
+    width: 100%;
+    height: 296px;
+    border: 1px solid black;
+    overflow: hidden;
+    margin-top: 2%;
+}
+.block4 ul{
+    width: 100%;
+    height: 100%;
+}
+.block4 ul li{
+    float: left;
+    height: 100%;
+    width: 20%;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.b-img{
+    width: 100%;
+    height: 100%;
+}
+.b-img img{
+    width: 30%;
+    height: 30%;
+    margin-top: 25%;
+    margin-left: 35%;
+}
+
+
+.b-t{
+    width: 100%;
+    height: 100%;
+    color:  rgba(146, 144, 144, 0.1);
+    
+    margin-top: -65%;
+}
+.b-t:hover{
+    background-color:rgb(32, 53, 72);
+    transition:background 1ms ease-in 1ms,color 1ms ease-in 1ms;
+}

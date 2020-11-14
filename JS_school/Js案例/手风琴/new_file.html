@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="js/jquery-1.10.2.js"></script>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			div{
+				width: 310px;
+				height:310px;
+				border: 1px solid black;
+			}
+			li{
+				width:100px;
+				height: 310px;
+				/* border: 1px solid red; */
+				float: left;
+				display: block;
+			}
+		</style>
+	</head>
+	<body>
+		<button onclick="a();">1</button>
+		<button onclick="b();">1</button>
+		<button onclick="c();">1</button>
+	<div>
+		<ul id="list">
+			<li>z</li>
+			<li>z</li>
+			<li>z</li>
+		</ul>
+	</div>
+		<script>
+			function a(){
+				$('#list>li').css('backgroudColor','yellow');
+			}
+			function b(){
+				$('#list>li').css({
+					'backgroundColor':'red',
+					'font-size':'20px',
+					'color':'blue'
+				});
+			}
+			function c(){
+				$('#list>li').css('backgroundColor','pink').css('color','green').css('font-size','30px')
+			}
+		</script>
+	</body>
+</html>

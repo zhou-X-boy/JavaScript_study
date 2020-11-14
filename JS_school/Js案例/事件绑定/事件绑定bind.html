@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="js/jquery-1.10.2.js"></script>
+		<style>
+			#container{
+				width: 200px;
+				height: 200px;
+				border: 1px solid blue;
+			}
+			#container li{
+				display: block;
+			}
+			.new{
+				color: green;
+			}
+		</style>
+	</head>
+	<body>
+		<button id="add" type="button">add DIV</button>
+		<button id="del" type="button">del DIV</button>
+		<button id="bindBtn" type="button">bind绑定单个事件</button>
+		<button id="bindBtns" type="button">bind绑定多个事件</button>
+		<button id="unbindBtn" type="button">unbind解绑事件</button>
+		<ul id="container">
+			<li>我是原生段落</li>
+		</ul>
+		<script>
+			$(function(){
+				//正常点击
+				$("#add").click(function(){
+					$("#container").append("<li class='new'>我是动态生成的li</li>");
+				});
+				$("#del").click(function(){
+					$("li:first").remove();
+				});
+				
+				//使用bind绑定click事件
+				//绑定单个事件
+				$("#bindBtn").bind('click',function(){
+					$(this).css("background","red");
+					$("ul").append("<li class='new'>bind绑定的单个事件</li>")
+				});
+				
+				//使用bind绑定click事件
+				//绑定多个事件
+				$("#bindBtns").bind('click',{user:'我',sex:'boy'},function(event){
+					$(this).css("background","red");
+					console.log(event.data.user);
+					console.log(event.data.sex);
+					$("ul").append("<li class='new'>bind绑定多个事件</li>")
+				});
+				//绑定多个事件，向函数内传入数据
+				$("#bindBtns").bind({
+					mousedown:function(){
+						console.log('鼠标按下');
+					},
+					click:function(){
+						console.log("点击按钮");
+					},
+					mouseover:function(){
+						console.log("光标进入按钮");
+					}
+				});
+				
+				//unbind解除bind绑定
+				$("#unbindBtn").click(function(){
+					$("#bindBtns").unbind();//取消所有事件
+					$("#bindBtn").unbind("click");//取消点击事件
+					$("#bindBtns").unbind("click mouseover");//取消多个事件
+				})
+			})
+		</script>
+	</body>
+</html>

@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>while语句计算10以内自然数之和</title>
+<script>
+function adds(){ 
+	//while
+	/*循环条件：从第一编开始，到10遍结束*/
+	/*循环操作：将 循环条件值 进行累加，更新循环变量*/
+	
+	var i=1,sum=0;	//声明变量i和sum，并赋初值
+	while(i<=10){ //改数值
+		sum+=i;// 步骤2
+		console.log(sum);//步骤1
+		i++;//试试和上一行换个顺序。
+	}
+}
+//document.write("1+2+3+...+100 = "+sum);	
+//输出运算结果
+</script>
+</head>
+<body>
+<div onClick="adds()">计算一下1-10的和</div>
+</body>
+</html>

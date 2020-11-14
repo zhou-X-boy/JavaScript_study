@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="js/jquery-1.10.2.js"></script>
+	</head>
+	<body>
+		<div id="box" style="border:1pxx solid aliceblue">
+			<ul>
+				<li id="item01">第一个li标签</li>
+				<li>
+					<p>第二个li标签的p标签</p>
+				</li>
+				<li>第三个li标签</li>
+			</ul>
+		</div>
+		<script>
+			$(function(){
+				$("#item01").append("新插入的元素：<b>Hellow world</b>");
+				
+				//appendTo()方法在被选元素的结尾(仍然在内部)插入指定元素
+				var alink='<a href="#">超链接</a>';
+				$(alink).appendTo("#item01");
+				
+			   //prepend() 在被选元素内的开头插入内容
+				$("item01").prepend("<b>Hello world</b>")
+				
+				//after() 在指定元素之后插入内容
+				$("#item01").after("<b>Hellow world</b>")
+			})
+		</script>
+	</body>
+</html>

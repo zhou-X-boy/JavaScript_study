@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="js/jquery-1.10.2.js"></script>
+		<style>
+			#box{
+				width: 300px;
+				height: 300px;
+				border: 1px solid green;
+				background-color: antiquewhite;
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<p>鼠标点击</p>
+		</div>
+		<script>
+			$(function(){
+				//鼠标按下瞬间
+				$("#box").mousedown(function(){
+					$("<p>鼠标按下瞬间</p>").appendTo(this);
+				});
+				
+				//鼠标松开瞬间
+				$("#box").mouseup(function(){
+					$(this).append('<p>鼠标松开瞬间</p>');
+				});
+				
+				//单击
+				$("#box").click(function(){
+					var $p=$('<p></p>');
+					$p.html("单击");
+					$(this).before($p);
+				});
+				
+				//双击
+				$("#box").dblclick(function(){
+					$(this).after("<p>双击</p>");
+				})
+			})
+		</script>
+	</body>
+</html>

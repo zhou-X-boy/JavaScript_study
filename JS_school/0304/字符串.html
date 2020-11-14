@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var text="Zhou Wen Qiang"
+			var text2="T2018210102"
+			document.write("字符串text:"+text+"<br/>"+"字符串text2:"+text2+"<br/>")
+			txt=text.split(" ");//字符串转换成数组
+			document.write(txt+"<br/>");
+			document.write("拼接字符串text和text1"+text.concat(" ",text2)+"<br/>");//拼接字符串
+			document.write("字符串text长度"+text.length+"<br/>");//字符串长度
+			document.write("字符串text转换成小写"+text.toLowerCase()+"<br/>");//转换成小写
+			document.write("字符串text转换成大写"+text.toUpperCase()+"<br/>");//转换成大写
+			document.write("返回字符串text中o首次出现的索引位置"+text.indexOf("o")+"<br/>");//返回字符串首次出现的索引位置
+			document.write("返回字符串text中o最后一次出现的索引位置"+text.lastIndexOf("o")+"<br/>");//返回字符串最后一次出现的索引位置
+			document.write("提取字符串text位置2到位置9的片段"+text.slice(2,9)+"<br/>");//提取字符串位置2到位置9的片段
+			document.write("提取字符串text位置-3到位置-1的片段"+text.slice(-3,-1)+"<br/>");//如果某个参数为负，则从字符串的结尾开始计数
+			document.write("提取字符串text位置2到位置9的片段"+text.substring(2,9)+"<br/>");//提取字符串位置2到位置9的片段
+			document.write("提取字符串text位置2开始长度3的片段"+text.substr(2,3)+"<br/>");//提取字符串位置2开始长度3的片段
+		</script>
+		
+	</body>
+</html>

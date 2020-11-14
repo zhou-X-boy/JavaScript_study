@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>jQuery遍历</title>
+    <script src="js/jquery-1.10.2.js"></script>
+
+    <style type="text/css">
+        ul {
+            list-style: none
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            width: 1200px;
+            height: 500px;
+            margin: 50px auto;
+            border: 1px solid #333;
+            overflow: hidden;
+        }
+
+        div li {
+            width: 200px;
+            float: left;
+            margin: 0 10px;
+        }
+
+        div li img {
+            width: 100%;
+        }
+
+        div ul {
+            width: 100%;
+            height: 304px;
+        }
+        .btns .btn{ background: none; background-size: 100% 94% !important; width: 200px;height: 60px; line-height: 30px; display:inline-block;font-size: 22px; text-align: center; font-weight: bold; border:none;}
+        .btns button { border:none; outline:none; }
+        /* outline:none  去除表单元素默认的外轮廓 */
+        .btns .btn01{   background:url(images/btn01.png) center center no-repeat;  }
+        .btns .btn02{   background:url(images/btn03.png) center center no-repeat;  }
+        .btns .btn03{   background:url(images/btn02.png) center center no-repeat;  }
+    /* css优先级：行内样式> id > class >  标签名 */
+    </style> 
+</head> 
+<body>
+    <h3>demo0401：jquery渐隐渐入</h3> <br>
+    <p class="btns" style="width:700px; margin:0 auto;">
+        <button class="btn btn01" id="btn01">渐渐显示</button>
+        <button class="btn btn02" >渐渐隐藏</button>
+        <button class="btn btn03" >渐渐切换</button>
+    </p>
+    <div id="box" class="">
+        <ul>
+            <li>
+                <a class="aa01" href="#">我是第1张图</a>
+                <img src="images/1.jpg" />
+            </li>
+            <li>
+                <a href="#">我是第2张图</a>
+                <img src="images/2.jpg" />
+            </li>
+            <li>
+                <a href="#">我是第3张图</a>
+                <img src="images/3.jpg" />
+            </li>
+            <li>
+                <a href="#">我是第4张图</a>
+                <img src="images/4.jpg" />
+            </li>
+            <li id="item05">
+                <a href="#">我是第5张图</a>
+                <img src="images/5.jpg" />
+            </li>
+        </ul>
+    </div>
+    <script>
+        $(function () {
+            //1 #box先隐藏
+            $("#box").hide();
+            //2 渐渐出现
+            $(".btns button:eq(0)").click(function(){
+                $("#box").fadeIn();
+            }) 
+            //3 渐渐隐藏
+            $(".btns button").eq(1).click(function(){
+                $("#box").fadeOut();
+            })
+            
+            // 4 渐隐渐入切换 fadeToggle
+            $(".btns button:eq(2)").click(function () {
+                $("#box").fadeToggle(); 
+            });
+
+            // 可比较mouseOver 与mouseEnter
+        })
+    </script>
+
+
+</body>
+
+</html>

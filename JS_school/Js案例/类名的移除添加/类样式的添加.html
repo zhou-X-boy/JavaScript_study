@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="js/jquery-1.10.2.js"></script>
+		<style>
+			#dv{
+				width: 300px;
+				height: 150px;
+				border: 1px solid black;
+			}
+			.bg01{
+				background-color: blue;
+			}
+			.bg02{
+				color: red;
+			}
+			.bg03{
+				text-align: center;
+			}
+			.bg04{
+				font-weight: bold;
+			}
+			.font{
+				font-size: 30px;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div id="dv">abcd</div>
+		<script>
+			$(function(){
+				$('#dv').addClass("bg01");
+				$('#dv').addClass("bg02").addClass("font");
+				$('#dv').addClass("bg03 bg04");
+				$('#dv').removeClass('bg03');//移除
+			})
+		</script>
+	</body>
+</html>

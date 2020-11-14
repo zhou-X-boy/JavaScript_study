@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>jQuery插入元素</title>
+	<script src="js/jquery-1.10.2.js"></script>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		ul {
+			width: 1110px;
+			margin: 0 auto;
+			border: 2px solid red;
+			background-color: aquamarine;
+			overflow: hidden;
+		}
+
+		ul:after {
+			/*在浮动元素的父级元素里设置清除浮动*/
+			content: '';
+			display: block;
+			clear: both;
+		}
+
+		li {
+			width:200px; 
+			overflow: hidden;
+			float: left; 
+			margin: 0 10px;
+			line-height: 40px;
+		} 
+		li a{display: block; width: 100%;font-size: 24px; text-align: center;}
+
+		li img {
+			display: block;
+			width: 100%;
+			/* height: 0; */
+			margin: 0 auto;
+		}
+		.h270{ height: 270px;}
+	</style>
+
+</head>
+
+<body>
+	<h3>demo0407：横向下拉菜单</h3>
+	<ul id="list">
+		<li><a>被光抓走的人</a>
+			<img src="images/1.jpg"> 
+		</li>
+		<li><a>少年的你</a> <img src="images/2.jpg"> 
+		</li>
+		<li><a>流浪地球</a><img src="images/3.jpg">  
+		</li>
+		<li><a>战狼Ⅱ </a><img src="images/4.jpg"> 
+		</li>
+		<li><a>人在囧途</a> <img src="images/5.jpg"> 
+		</li>
+	</ul>
+	<script> 
+
+		$(document).ready(function () {
+			$("#list li").children("img").hide();
+			 $("#list li").click(function(){
+				 //1，遍历+设置类名
+				 $("#list li").children("img").removeClass('h270');
+				 $(this).children("img").addClass('h270');
+
+				 //2，遍历+动画
+				 $("#list li").children("img").slideUp();
+				 $(this).children("img").slideDown();
+			 })
+		}); 
+	</script>
+</body>
+
+</html>

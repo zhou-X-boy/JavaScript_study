@@ -1,0 +1,64 @@
+.block3{
+    width: 100%;
+    height: 512px;
+    overflow: hidden;
+    /* border: 1px solid black; */
+    margin-top: 2%;
+}
+.img3{
+    overflow: hidden;
+    width: 25%;
+    height: 100%;
+    float: right;
+    /* border: 1px solid blue; */
+}
+.box5{
+    width: 73%;
+    height: 100%;
+    float: left;
+    overflow: hidden;
+    background-color: #751d1c;
+}
+.img3 a img{
+    width: 100%;
+    height: 100%;
+}
+.img3:hover{
+    transform: scale(1.2);
+}
+.shan{
+    width: 100%;
+    height: 30%;
+    /* background-color: azure; */
+}
+.xia{
+    width: 100%;
+    height: 70%;
+    /* background-color: blue;  */
+    margin-top: -7%;
+}
+.jtanleft{
+    width: 48%;
+    height: 100%;
+    display: block;
+    float: left;
+    overflow: hidden;
+}
+.jtanright{
+    width: 48%;
+    height: 100%;
+    display: block;
+    float: right;
+    overflow: hidden;
+}
+.jtan .jtanleft h3 a,.jtan .jtanright h3 a{
+    color: #ffd6d6;
+}
+.jtan .jtanleft p,.jtan .jtanright p{
+    color: #ffd6d6;
+}
+.jtan .jtanleft ul li,.jtan .jtanright ul li{
+    margin-left: 6%;
+    line-height: 180%;
+    margin-top: 5%;
+}

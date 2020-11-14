@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>动态修改文本</title>
+    <script src="js/jquery-1.10.2.js"></script>
+</head>
+
+<body>
+    <h2>使用$.ajax</h2>
+    <button>异步请求服务器端的JSON数据</button>
+    <script>
+        $("button").click(function() {
+            //$.ajax参数是对象，
+            $.ajax({
+                url: "0807-jquery-ajax.php",
+                type: 'GET',
+                // data: { uname: ' tom', age: 20   },
+                beforeSend: function() {
+                    console.log('\n beforeSend'); //几乎很少用
+                },
+                success: function(obj, msg, xhr) {
+                    // console.log('succuss');
+                    // console.log(arguments);
+                    console.log(obj, msg, xhr);
+                },
+                error: function(xhr) {
+                    alert("错误提示： " + xhr.status + " " + xhr.statusText);
+                },
+                complete: function() {
+                    console.log('complete');
+                }
+            });
+            // console.log($.ajax(arguments));
+        });
+    </script>
+</body>
+
+</html>

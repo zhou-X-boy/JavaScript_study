@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="js/jquery-1.10.2.js"></script>
+		<style>
+			#container{
+				width: 300px;
+				border: 1px solid blue;
+			}
+			.created{
+				width: 300px;
+				height: 50px;
+				border: 1px solid green;
+			}
+			
+			.new{
+				color: green;
+			}
+		</style>
+	</head>
+	<body>
+		<button id="add" type="button">add DIV</button>
+		<button id="del" type="button">del DIV</button>
+		<button id="onBtn" type="button">on绑定单个事件</button>
+		<button id="onBtns" type="button">on绑定多个事件</button>
+		<button id="offBtn" type="button">off解绑事件</button>
+		<div id="container">
+			<div class="created">1</div>
+			<div class="created">2</div>
+		</div>
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+		</ul>
+		<script>
+			$(function(){
+				//使用on单事件绑定
+				$("#onBtn").on('click',function(){
+					$(this).css("background","red");
+				});
+				$("li").click(function(){
+					console.log("bomm1");
+				});
+				$("li").on('click',function(){
+					console.log("boom-on-当前元素")
+					$(this).css("color","red");
+				});
+				
+				$("ul").on('click','li',function(){
+					console.log("boom2--on委托父元素!");
+					$(this).css("color","red");
+				});
+				
+				//使用on同时绑定多个事件，绑定同一函数
+				$("#onBtns").on('click dbclick',function(e){
+					console.log(e.target);
+					e.target.innerHTML="哈";
+				})
+				$("#onBtns").on({
+					click:function(){
+						console.log("单击");
+					},
+					mouseover:function(){
+						console.log("光标进入");
+					}
+				})
+				
+				//调用函数，传入自定义函数
+				$("#oBtns").on("click",{
+					name:"a",
+					},function(event){
+						console.log(event.data.name)
+					}
+				);
+				//$("#offBtn").off('click mouseover');
+			})
+		</script>
+	</body>
+</html>

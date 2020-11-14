@@ -1,0 +1,103 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>HTML DOM</title>
+<style>
+ #div2{ font-size:30px;}
+</style>
+</head>
+<body>
+<h2>parent.appendChild(son);</h2>
+ <div id="div1">
+ 	我是父元素
+ 	<p>我是原有的P元素</p>
+ </div>
+ <br>
+<script>  
+//DOM元素及遍历
+
+//1 添加子元素 / 创建新的HTML元素
+//如需向 HTML DOM 添加新元素，必须先创建该元素，然后把它追加到已有的元素上。
+var  sonp=document.createElement('p');
+     sonp.setAttribute('class','para');
+	 sonp.innerHTML='我是新来的子元素P';
+	 
+	 var div1=document.getElementById("div1");
+	 div1.appendChild(sonp); 
+</script>
+
+
+
+
+<h2>parent.insertBdfore(newson, oldson);</h2>
+ <div id="div2">
+ 	我还是父元素
+ 	<p id="p2">我是原有的P元素</p>
+ </div>
+ <br>
+<script>  
+//2 不想作为最后一个子元素插进去
+var div2=document.getElementById("div2");
+var  sonp=document.createElement('p');
+     sonp.setAttribute('class','para');
+	 sonp.innerHTML='我是新来的子元素P';
+
+var p2=document.getElementById("p2"); 
+	 div2.insertBefore(sonp,p2);
+</script>
+
+
+
+
+
+
+
+<h2>parent.removeChild(son);</h2>
+ <div id="div3">
+ 	我还是父元素
+ 	<p id="p31">我是你的大儿子元素，不要删掉我！</p>
+    <p id="p32">我是你的二儿子元素，千万不要删掉我！</p>
+    <p id="p33">我是你的小儿子元素，千万不要删掉我！</p>
+ </div>
+ <br>
+<script>  
+//3 删除子元素
+var div3=document.getElementById("div3");
+ var p32=document.getElementById("p32"); 
+	 div3.removeChild(p32);
+	 
+//如果你不知道父元素是谁，那就要先查找父元素节点
+var p33=document.getElementById("p33"); 
+	p33.parentNode.removeChild(p33);
+</script>
+
+
+
+
+
+
+<h2>parent.replaceChild(newson, oldson);</h2>
+ <div id="div4">
+ 	我还是父元素
+ 	<p id="p41">我是你的大儿子元素，不要删掉我！</p> 
+    <p id="p42">我是你的小儿子元素，千万不要删掉我！</p>
+ </div>
+ <br>
+<script>  
+//4 替换子元素
+var div4=document.getElementById("div4");
+var p41=document.getElementById("p41"); 
+
+var newson=document.createElement("p");
+newson.setAttribute('class', 'pnew');
+var txtnode=document.createTextNode('俺是新来的儿子元素');
+newson.appendChild(txtnode);
+
+div4.replaceChild(newson, p41);
+	  
+</script>
+
+
+</body>
+</html>

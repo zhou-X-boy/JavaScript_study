@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JavaScript与jquery比较</title>
+<script src="js/jquery-1.10.2.js"></script>
+<style type="text/css">
+ .btns{ width:80px; height:46px;}
+ #btn2{ color:#f00;}
+</style>
+
+</head>
+
+<body>
+<h3>demo04：开灯与关灯</h3>
+ 
+
+<input type="button" value="开灯" id="btn1" class="btns" />
+<script type="text/javascript">
+//js写法
+window.onload=function(){
+	document.getElementById("btn1").onclick=function(){
+		if(this.value=="开灯"){
+			this.style.backgroundColor="black";
+			this.style.color="#fff";
+			this.value="关灯";
+		}else{
+			this.style.backgroundColor='white';
+			this.style.color='black';
+			this.value='开灯';
+		}
+	}
+}
+
+</script> 
+ 
+ 
+ 
+ 
+ 
+ 
+<br><br>
+ 
+<input type="button" value="马上开灯" id="btn2" class="btns" />
+<script type="text/javascript">
+//jQuery写法
+$(function(){
+	$("#btn2").click(function(){
+		if( $(this).val()=='马上开灯' ){
+			$(this).val('快关灯');
+			$(this).css("backgroundColor","black");
+		}else{
+			$(this).val('马上开灯');
+			$(this).css("backgroundColor","white");
+		}
+	})
+})
+
+</script> 
+
+
+<br>
+<p>名称: <input type="text" name="user" value="Peter">
+<input type="text" name="user2" value="Peter"></p>
+<button id="btn4">设置输入字段的值</button>
+<script>
+$(document).ready(function(){
+	$("#btn4").click(function(){
+		$("input:text").val(function(n,c){
+			console.log(n,c);
+			return c + " Griffin";
+		});
+	});
+});
+
+//n == 0 代表是用input:text这个选择器选择出来的第0个元素，它选出来的可能会有多个，当然，当前例子肯定只有一个
+//c == "Peter" 因为当前是val方法，val就是取内容value，所有你拿到的是这字符串
+</script>
+</body>
+</html>
+
+
+
+
+

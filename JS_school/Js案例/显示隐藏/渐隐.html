@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="js/jquery-1.10.2.js"></script>
+		<style>
+			ul li{
+				display: block;
+			}
+		</style>
+	</head>
+	<body>
+		<p class="btns">
+			<button class="btn btn01">a</button>
+			<button class="btn btn02">b</button>
+			<button class="btn btn03">c</button>
+		</p>
+		<div id="box" style="border: 1px solid blue;">
+			<ul>
+				<li>
+					<a class="aa01" href="#">1</a>
+				</li>
+				<li>
+					<a href="#">2</a>
+				</li>
+				<li>
+					<a href="#">3</a>
+				</li>
+			</ul>
+		</div>
+		<script>
+			$(function(){
+				//隐藏
+				$("#box").hide();
+				//渐渐出现
+				$(".btns button:eq(0)").click(function(){
+					// $("#box").show();
+					$("#box").fadeIn(1000);	
+				})
+				//渐渐隐藏
+				$(".btns button:eq(1)").click(function(){
+					// $("#box").hide();
+					$("#box").fadeOut(1000);
+				})
+				//渐隐渐入切换 fadeToggle
+				$(".btns button:eq(2)").click(function(){
+					// $("#box").toggle();
+					$("#box").fadeToggle(1000);
+				})
+			});
+		</script>
+	</body>
+</html>

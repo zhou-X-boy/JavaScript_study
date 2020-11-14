@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+#header {
+    background: #fbfbfb;
+}
+
+#header:after {
+    display: block;
+    content: '';
+    clear: both;
+}
+
+#header img {
+    float: left;
+}
+
+#header .nav:after {
+    display: block;
+    content: '';
+    clear: both;
+}
+
+#header .nav li {
+    float: left;
+    margin-right: 10px;
+}

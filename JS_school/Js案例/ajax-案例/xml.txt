@@ -1,0 +1,20 @@
+XML：
+<note>
+<to>George</to>
+<from>John</from>
+<heading>Reminder</heading>
+<body>Don't forget the meeting!</body>
+</note>
+===================
+XML：可扩展标记语言
+HTML：超文本标记语言
+二者之间的差异：
+	XML不是HTML的替代。
+	XML是对HTML的补充。
+      XML和HTML是为不同的目的而设计：
+	XML被设计用来传输和存储数据，其焦点是数据的内容。
+	HTML被设计用来显示数据，其焦点是数据的外观。
+对XML最好的描述是：它是独立于软件和硬件的信息传输工具。
+———————————————— 
+1、语法有所不同。XML语法比较严谨而HTML语法比较松散。
+2、用途不同。XML主要用于数据格式化存储而HTML主要用于网页的编辑。

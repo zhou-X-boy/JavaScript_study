@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>do while</title>
+<script>
+ //先让用户输入一个数据
+ //如果是exit，则给出弹窗并退出
+ //否则输出录入的数据，并继续输入
+ 
+/*function pmsg(){
+	do{
+		  //1 声明变量，保存用户录入的数据
+		  var msg=prompt("请输入：");
+		  if(msg == "exit"){  //如果数字大于10，则退出，否则一致循环
+			  alert("退出");
+		  }else{
+			  console.log(msg); 
+		  } 
+	  }while(msg!="exit");
+}*/
+
+
+
+
+function pmsg2(){
+	var i=1;
+	do{
+		 console.log("你跑完了" + i+ "圈！");
+		 i++;
+	  }while(i<=3);
+}
+
+ 
+</script>
+</head>
+<body>
+<h5 onClick="pmsg2()">点我试下</h5>
+</body>
+</html>

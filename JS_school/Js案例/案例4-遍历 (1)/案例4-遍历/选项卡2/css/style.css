@@ -1,0 +1,218 @@
+/* 公共样式表css */
+html, body {
+    color: #333;
+    margin: 0;
+    /* height: 100%; */
+    font-family: "Myriad Set Pro", "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: normal;
+}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+img {
+    border: 0;
+}
+body {
+    background: #fff;
+    color: #666;
+}
+html, body, div, dl, dt, dd, ol, ul, li, h1, h2, h3, h4, h5, h6, p, blockquote, pre, button, fieldset, form, input, legend, textarea, th, td {
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    color: #08acee;
+}
+button {
+    outline: 0;
+}
+img {
+    border: 0;
+}
+button, input, optgroup, select, textarea {
+    margin: 0;
+    font: inherit;
+    color: inherit;
+    outline: none;
+}
+li {
+    list-style: none;
+}
+a {
+    color: #666;
+}
+a:hover {
+    color: #eee;
+}
+.clearfix::after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+.clearfix {
+}
+/* 必要布局样式css */
+.sign-content {
+    width: 1182px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding-top: 4px;
+    padding-bottom: 1px;
+}
+.sign-nav {
+    width: 1184px;
+    height: 39px;
+    background-color: #f3f3f3;
+    border-bottom: 2px solid #a5e1d6;
+    padding-left: 16px;
+    line-height: 39px;
+}
+.sign-nav h2 {
+    width: 176px;
+    font-size: 18px;
+    margin-top: 0px;
+    position: relative;
+    float: left;
+}
+.sign-nav ul {
+    width: 878px;
+    padding-left: 130px;
+    float: left;
+}
+.sign-nav ul li {
+    float: left;
+    color: #606060;
+    padding: 0px 20px;
+    font-size: 15px;
+    cursor: pointer;
+    line-height: 38px;
+}
+.sign-nav ul .on {
+    border-left: 1px solid #98dfd2;
+    border-right: 1px solid #98dfd2;
+    border-top: 2px solid #39BAA6;
+    background: #fff;
+    color: #39BAA6;
+    height: 41px;
+    margin-top: -2px;
+}
+.sign-ad {
+    float: left;
+    width: 176px;
+    height: 335px;
+}
+.sign-body ul {
+    width: 1040px;
+    height: 341px;
+    padding-top: 22px;
+    display: none;
+    float: left;
+    position: absolute;
+    left: 176px;
+    top: 0;
+    overflow: hidden;
+}
+.sign-body ul li {
+    width: 252px;
+    height: 157px;
+    border-right: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    padding-left: 36px;
+    padding-right: 36px;
+    padding-bottom: 15px;
+    padding-top: 9px;
+    float: left;
+}
+.sign-item-title {
+    font-size: 14px;
+    color: #3f3f3f;
+    margin-bottom: 13px;
+    display: block;
+    width: 183px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.sign-item-text {
+    font-size: 13px;
+    color: #666666;
+    margin-bottom: 10px;
+    margin-top: -6px;
+}
+.sign-item-bottom {
+    margin-bottom: 5px;
+}
+.sign-icon-ad {
+    width: 12px;
+    height: 14px;
+    float: left;
+    background: url(../images/adress.png) no-repeat;
+    margin-right: 5px;
+    margin-top: 1px;
+}
+.sign-icon-ti {
+    width: 144px;
+    color: #9c9c9c;
+    font-size: 12px;
+    overflow: hidden;
+    white-space: nowrap;
+    float: left;
+}
+.sign-icon-time {
+    width: 12px;
+    height: 14px;
+    float: left;
+    background: url(../images/time.png) no-repeat;
+    margin-right: 6px;
+    margin-top: 3px;
+}
+.sign-item-top {
+    margin-top: 10px;
+    zoom: 1;
+}
+.sign-item-top-title {
+    color: #ff7011;
+    font-size: 19px;
+    float: left;
+    font-family: "Microsoft YaHei";
+}
+.sign-item-top-time {
+    margin-left: 15px;
+    margin-top: 4px;
+    float: right;
+}
+.sign-item-top-time span {
+    color: #31a893;
+    font-size: 12px;
+}
+.sign-item-top-time span i {
+    display: inline-block;
+    color: #35bda3;
+    height: 15px;
+    line-height: 15px;
+    margin-left: 1px;
+    margin-right: 1px;
+    border-radius: 2px;
+    font-size: 12px;
+    padding: 0px 3px 1px 3px;
+    border: 1px solid #c2e9e6;
+    background-color: #efffff;
+    font-style: inherit;
+}
+.sign-item-title:hover {
+    color: #38bca4;
+}
+.sign-body {
+    position: relative;/* width: 1530px; */
+    /* overflow: hidden; */
+}

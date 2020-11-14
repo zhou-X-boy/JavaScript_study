@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <title></title>
+	</head>
+	<body>
+		<button type="button" onclick="postbtn">POST请求数据</button>
+		<div id="box">
+			
+		</div>
+		<script type="text/javascript">
+		function postbtn(){
+			var xhr;
+			if (window.XMLHttpRequest){
+				  xhr=new XMLHttpRequest();
+				}
+			else
+			  {
+				  xhr=new ActiveXObject("Microsoft.XMLHTTP");
+			  }
+			xhr.onreadystatechange=function(){
+				  if (xhr.readyState==4 && xhr.status==200){
+					  document.getElementById("box").innerHTML=xhr.responseText;
+				  }
+			 }
+			xhr.open("POST","a.txt",true);
+			xhr.send(null);
+		}
+		</script>
+	</body>
+</html>
+

@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>表单验证</title>
+    <script src="js/jquery-1.10.2.js"></script>
+   
+    <link rel="stylesheet" type="text/css" href="form02.css"> 
+    
+</head>
+
+<body>
+    <h1 style="text-align:center;"></h1>
+    <form id="form" method="post" >
+        <ul>
+			<li>
+				<label><i class="red">*</i>账号：</label>
+				<input type="text" id="tel" required/>
+				<span class="tips"></span>
+			</li>
+            <li>
+                <label><i class="red">*</i>用户名：</label>
+                <input type="text" id="user" name='user123'  value="" placeholder="用户名" required >
+				<span class="tips"></span>
+            </li>
+            <li>
+                <label><i class="red">*</i>课程：</label>
+                <input type="text" id="kc" required >
+				<span class="tips"></span>
+            </li>
+            <li>
+				<label><i class="red">*</i>年级：</label>
+				<select>
+					<option value ="nj">小班</option>
+					<option value ="nj">中班</option>
+					<option value ="nj">大班</option>
+				</select>
+			</li>
+			
+			<li>
+				<label>留言：</label>
+				<textarea id="area" rows="s"></textarea>
+			</li>
+            <li>
+                <input type="submit" id="sub" value="提  交">
+            </li>
+        </ul>
+    </form> 
+	<script>
+		$(function(){
+			$("input:text").focus(function(){
+				$(this).css("background","azure");
+				$(this).css("border","1px solid red");
+			});
+			
+			$("input:text").blur(function(){
+				$(this).css("background",'#fff');
+				$(this).css("border","1px solid #333");
+			});
+			
+			//表单内容改变时(text,textarea,select)
+			$(":input").change(function(){
+				$(this).animate({"width":"300px"},100);
+			});
+			
+			//文本框/文本域被选中
+			$(":input").select(function(){
+				$(this).after("文本已选中");
+			});
+			//表单form提交
+			$("form").submit(function(){
+				alert("提交成功");
+			});
+		})
+	</script>
+</body>
+
+</html>

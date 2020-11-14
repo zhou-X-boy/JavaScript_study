@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>判断成绩是否合格</title>
+<script>
+
+  //函数声明
+  function score(sc){
+  		 
+		 if(sc>=60  &&  sc<=100){
+			//console.log('法拉利');
+			alert('法拉利');
+		 }else if(sc<60 && sc>=0){
+			//console.log('拖拉机');
+			alert('拖拉机');
+		 }else{
+		   alert('请输入0-100分的数字！');
+		 }
+  }
+  
+  //score('90');//函数调用：函数名();
+   
+  //document.write('hello  world!'); 
+</script>
+</head> 
+<body> 
+ <!-- <p onclick="score(89)">看看你的英语及格了吗？</p>
+  <p onClick="score('tom');">看看你的网页设计及格了吗？</p>-->
+</form>
+
+
+
+<script>
+/*var a;
+if(a=prompt('请输入你的分数：') >=60){
+	if(Sa<=70){console.log('打赤脚');}
+	else if(a<=80){ console.log('拖鞋');}
+	else if(a<=90){ console.log('凉鞋');}
+	else if(a<=100){ console.log('皮鞋');}
+}else if(a<60 && a>=0){
+	console.log('喝凉水');
+}*/
+
+
+
+//函数的声明
+function add(n1,n2){
+	var sum=n1+n2;
+   alert(n1+ '+' + n2 + '=' + sum);  
+}
+
+//调用函数
+//add(5,1);  
+</script>
+<div onclick="add(12,33);">算2个数的和</div>
+
+
+
+<script>
+//while循环
+//在控制台打印十遍‘你好！’
+ 
+ var i=33;
+ /*while(i<=10){
+ 	console.log('你好！');
+	i++;
+ }*/
+ //改成do...while
+ /*do{
+ 	console.log('你好！');
+	i++;
+ }while(i<=10);*/
+ 
+ //for
+ for(var n=1; n<=10;n++ ){
+ 	console.log('吃饭');
+ }
+ 
+ 
+ //for ...in
+ 
+ var arr=['aa','bb','cc'];
+ for( i in arr){
+	console.log(i+'：'+arr[i]); 
+}
+ 
+
+
+</script>
+ 
+
+
+
+
+
+
+
+
+</body>
+</html>

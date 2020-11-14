@@ -1,0 +1,33 @@
+
+.css()
+
+addClass( ' ' )  添加类名
+removeClass()   移除类名
+hasClass()  判断有没有类名，结果是  true/false
+toggleClass('on');  切换类名
+
+遍历
+1 遍历后代元素：
+children(selector) 直接子元素，为空的时候，默认选中所有的儿子辈元素。
+find(selector) 所有后代元素， 为空的时候，不会选中任何后代元素
+
+2 遍历祖先元素：
+parent()  直接父元素
+parents(selector)  所有的祖先元素，一直到(包括)html根元素，
+parentsUntil(selector, filter)  遍历祖先元素们，直到遇见selector（但不包括selector）
+                                 假设：a.link的祖先元素有：li >  ul   > div#box  > body   > html根元素
+		$('a').parentsUntil("body").css(边框2像素)  ：
+		   只会遍历/选取  li  >  ul   >div#box，不会包括body
+
+3 遍历兄弟元素
+1).next(selector)：紧邻的后面的同胞元素
+2).prev(selector)：紧邻的的前面同胞元素
+3).siblings(selector)：所有同胞元素
+4).nextAll()：后面的所有同胞元素
+5).nextUntil(selector,filter) ：后面的同胞元素,直到（但不包括）遇见selector
+6).prevAll()    ：前面的所有同胞元素
+7).prevUntil(selector,filter) ：前面的同胞元素,直到（但不包括）遇见selector
+
+
+4 显示与隐藏
+hide()   show()

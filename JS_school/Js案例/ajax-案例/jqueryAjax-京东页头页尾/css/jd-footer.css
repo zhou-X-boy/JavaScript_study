@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+#footer {
+    border: 1px solid #ddd;
+    background: #fafafa;
+    height: 60px;
+}
+
+#footer .nav:after {
+    display: block;
+    content: '';
+    clear: both;
+}
+
+#footer .nav {
+    width: 50%;
+    margin: 0 auto;
+}
+
+#footer .nav li {
+    float: left;
+    margin-right: 10px;
+    text-align: center;
+}
+
+.copy {
+    text-align: center;
+}
